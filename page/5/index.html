@@ -278,7 +278,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/Http上传原理/">
+    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/从-Eclipse或NetBeans-转换到-IntelliJ-IDEA/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -297,7 +297,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/Http上传原理/" itemprop="url">Http上传原理</a></h1>
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/从-Eclipse或NetBeans-转换到-IntelliJ-IDEA/" itemprop="url">从-Eclipse或NetBeans-转换到-IntelliJ-IDEA</a></h1>
         
 
         <div class="post-meta">
@@ -371,13 +371,12 @@
       
         
           
-          Http上传需要用到multipart/form-data请求方式，Http协议原始方法不支持multipart/form-data请求，那这个请求自然就是由原始的请求方法拼装而成，具体规则如下：
+          https://www.jetbrains.com/help/idea/2017.1/eclipse.html  eclipsehttps://www.jetbrains.com/help/idea/2017.1/netbeans.html  netbeans
 
-1、multipart/form-data的本质上还是Post请求2、multipart/form-data与post方法的不同之处：请求头，请求体。3、multipart/form-data的请求头
-          ...
+          
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/Http上传原理/#more" rel="contents">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/从-Eclipse或NetBeans-转换到-IntelliJ-IDEA/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -428,7 +427,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/IDEA配置JUnit进行单元测试/">
+    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/使用hexo+oschina搭建个人博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -447,7 +446,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/IDEA配置JUnit进行单元测试/" itemprop="url">IDEA配置JUnit进行单元测试</a></h1>
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/使用hexo+oschina搭建个人博客/" itemprop="url">使用hexo+oschina搭建个人博客</a></h1>
         
 
         <div class="post-meta">
@@ -521,15 +520,12 @@
       
         
           
-          前提条件安装JDK，并配置好环境变量工程已解决JUnit依赖关系（pom.xml）
-IDEA中JUnit配置IDEA自带一个JUnit插件，打开Settings窗口搜索junit，如图：图 1
-该插件可以运行JUnit测试文件，但无法自动生成JUnit测试代码：图 2
-如果需要自动生成测试代码，需要安装JUnitGenerator V2.0：图 3
-安装后，在需要测试的类文件里点击code-&gt
-          ...
+          http://lanmiao.oschina.io/2017/01/01/hexo1/
+
+          
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/IDEA配置JUnit进行单元测试/#more" rel="contents">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/使用hexo+oschina搭建个人博客/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -580,7 +576,7 @@ IDEA中JUnit配置IDEA自带一个JUnit插件，打开Settings窗口搜索junit�
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/IntelliJ-IDEA-插件推荐/">
+    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/log4j-properties配置详解/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -599,7 +595,7 @@ IDEA中JUnit配置IDEA自带一个JUnit插件，打开Settings窗口搜索junit�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/IntelliJ-IDEA-插件推荐/" itemprop="url">IntelliJ-IDEA-插件推荐</a></h1>
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/log4j-properties配置详解/" itemprop="url">log4j-properties配置详解</a></h1>
         
 
         <div class="post-meta">
@@ -673,12 +669,13 @@ IDEA中JUnit配置IDEA自带一个JUnit插件，打开Settings窗口搜索junit�
       
         
           
-          IntelliJ IDEA 插件推荐https://roc-wong.github.io/blog/2017/03/IntelliJ-IDEA-plugins.html
-
-          
+          ````1. 配置文件Log4J配置文件的基本格式如下：
+#配置根Loggerlog4j.rootLogger  =   [ level ]   ,  appenderName1 ,  appenderName2 ,  …
+#配置日志信息输出目的地Appenderlog4j.appender.appenderName  =  fully.qualified.name.of.appender.cla
+          ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/IntelliJ-IDEA-插件推荐/#more" rel="contents">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/log4j-properties配置详解/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -729,7 +726,7 @@ IDEA中JUnit配置IDEA自带一个JUnit插件，打开Settings窗口搜索junit�
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/IntelliJ-IDEA-激活并配置jrebel热部署/">
+    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/在windows中安装ubuntu/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -748,7 +745,7 @@ IDEA中JUnit配置IDEA自带一个JUnit插件，打开Settings窗口搜索junit�
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/IntelliJ-IDEA-激活并配置jrebel热部署/" itemprop="url">IntelliJ-IDEA-激活并配置jrebel热部署</a></h1>
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/在windows中安装ubuntu/" itemprop="url">在windows中安装ubuntu</a></h1>
         
 
         <div class="post-meta">
@@ -822,15 +819,12 @@ IDEA中JUnit配置IDEA自带一个JUnit插件，打开Settings窗口搜索junit�
       
         
           
-          http://www.toutiao.com/i6405125506206794242/
-IDEA 注册码激活服务器：http://idea.imsxm.com/
-LicenseServer.png使用方法Help-&gt;Register,弹出如上图界面。
-点击License Server 填写地址。Activate 激活 OK
-JRebel 激活打开下面的网站，用Twitter或者Facebo
-          ...
+          http://blog.csdn.net/freeboy1015/article/details/9319673
+
+          
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/IntelliJ-IDEA-激活并配置jrebel热部署/#more" rel="contents">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/在windows中安装ubuntu/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -881,7 +875,7 @@ JRebel 激活打开下面的网站，用Twitter或者Facebo
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/IntelliJ配置SVN/">
+    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/如何使用Intellij调试AngularJS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -900,7 +894,7 @@ JRebel 激活打开下面的网站，用Twitter或者Facebo
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/IntelliJ配置SVN/" itemprop="url">IntelliJ配置SVN</a></h1>
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/如何使用Intellij调试AngularJS/" itemprop="url">如何使用Intellij调试AngularJS</a></h1>
         
 
         <div class="post-meta">
@@ -974,310 +968,15 @@ JRebel 激活打开下面的网站，用Twitter或者Facebo
       
         
           
-          导入SVN项目
-通过TortoiseSVN在电脑创建一个代码仓库，导入相关项目；
-打开IntelliJ ，如果未打开Version Control Integration单击打开intellij IDEA里面的svn功能【菜单栏VCS–&gt;Enable Version Control Integration】
-配置SVN【菜单栏VCS—&gt;Checkout from VersionCont
+          设置Intellij或Webstorm来调试AngularJS很简单。
+1.为Chrome安装JetBrains IDE支持扩展转到Chrome网上应用店，并添加到  chromeBrains IDE支持
+
+2.在Intellij上创建一个新的JavaScript调试配置在Intellij上，转到“运行&gt;编辑配置…”，或单击菜单上的“编辑配置…”按钮：
+然后添加一个新的JavaScript调
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/IntelliJ配置SVN/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/Intellij-IDEA官方帮助文档解释什么是Artifact(原文翻译)/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="测不准">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="测不准">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/Intellij-IDEA官方帮助文档解释什么是Artifact(原文翻译)/" itemprop="url">Intellij-IDEA官方帮助文档解释什么是Artifact(原文翻译)</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
-                2017-11-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我是一枚程序员/" itemprop="url" rel="index">
-                    <span itemprop="name">我是一枚程序员</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          说明官方文档地址: https://www.jetbrains.com/help/idea/2016.2/working-with-artifacts.html翻译本只作为本人个人参考, 现提供给大家一并参考.因个人英语水平, 所以翻译的可能不是很好, 需要改进的地方还望懂的朋友提出以便本人加以修正.Artifact是什么? (What is an artifact?)Artifact是你的项目资
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/Intellij-IDEA官方帮助文档解释什么是Artifact(原文翻译)/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/JAVA判断一个URL是否有效/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="测不准">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="测不准">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/JAVA判断一个URL是否有效/" itemprop="url">JAVA判断一个URL是否有效</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
-                2017-11-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我是一枚程序员/" itemprop="url" rel="index">
-                    <span itemprop="name">我是一枚程序员</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          1234567try &#123;        url = new URL(&quot;http://127.0.0.1/sj/user/getUser&quot;);        in = url.openStream();   &#125; catch (Exception e1) &#123;        System.out.println(&quot;连接打不开!&quot;); 
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/JAVA判断一个URL是否有效/#more" rel="contents">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/如何使用Intellij调试AngularJS/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1479,7 +1178,7 @@ JRebel 激活打开下面的网站，用Twitter或者Facebo
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/Java-8新特性/">
+    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/深入理解Java-8-Lambda表达式（Oracle官方文档版）/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -1498,7 +1197,7 @@ JRebel 激活打开下面的网站，用Twitter或者Facebo
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/Java-8新特性/" itemprop="url">Java-8新特性</a></h1>
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/深入理解Java-8-Lambda表达式（Oracle官方文档版）/" itemprop="url">深入理解Java-8-Lambda表达式（Oracle官方文档版）</a></h1>
         
 
         <div class="post-meta">
@@ -1573,13 +1272,14 @@ JRebel 激活打开下面的网站，用Twitter或者Facebo
         
           
           
-“Java并没有没落，人们很快就会发现这一点”
+Java 8 问世三年了，9马上也要问世了，所以，嗯，我要开始学8了……
 
-java 8 简明教程https://wizardforcel.gitbooks.io/modern-java/content/ch1.html本教程将带领你一步一步地认识这门语言的新特性。通过简单明了的代码示例，你将会学习到如何使用默认接口方法，Lambda表达式，方法引用和重复注解。看完这篇教程后，你还将对最新推出的API有一定的了解，例如：
+官方文档：http://docs.oracle.com/javase/tutorial/java/javaOO/lambdaexpressions.html
+为什么用Lambda表达式只是代码简洁了这个好处的话，并不能打动很多观众，java 8也不会这么令人期待，其实java 8引入lambda迫切需求是因为lambda
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/Java-8新特性/#more" rel="contents">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/深入理解Java-8-Lambda表达式（Oracle官方文档版）/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1630,7 +1330,7 @@ java 8 简明教程https://wizardforcel.gitbooks.io/modern-java/content/ch1.html
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/Java-8的新特性—终极版文章/">
+    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/网站升级为https过程记录-tomcat/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -1649,7 +1349,7 @@ java 8 简明教程https://wizardforcel.gitbooks.io/modern-java/content/ch1.html
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/Java-8的新特性—终极版文章/" itemprop="url">Java-8的新特性—终极版文章</a></h1>
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/网站升级为https过程记录-tomcat/" itemprop="url">网站升级为https过程记录-tomcat</a></h1>
         
 
         <div class="post-meta">
@@ -1723,12 +1423,311 @@ java 8 简明教程https://wizardforcel.gitbooks.io/modern-java/content/ch1.html
       
         
           
-          Java 8的新特性—终极版http://ifeve.com/java-8-features-tutorial/Java 8 特性 – 终极手册http://www.jianshu.com/p/5b800057f2d8 Java 8的新特性—终极版
-深入理解 Java 8 Lambda（语言篇——lambda，方法引用，目标类型和默认方法）深入理解 Java 8 Lambda（类库篇——Strea
+          1.创建.keystore12345678910111213141516171819202122[root@centos apache-tomcat-6.0.37]# keytool -genkey -alias tomcat -keyalg RSA -keystore /root/tomcat/apache-tomcat-6.0.37/conf/.keystore输入keystore密码：  再
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/Java-8的新特性—终极版文章/#more" rel="contents">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/网站升级为https过程记录-tomcat/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/我是一枚程序员/超链接-a-中的文字自动换行/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="测不准">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="测不准">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/超链接-a-中的文字自动换行/" itemprop="url">超链接-a-中的文字自动换行</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
+                2017-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/我是一枚程序员/" itemprop="url" rel="index">
+                    <span itemprop="name">我是一枚程序员</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          css3：word-wrap:break-word
+语法word-wrap: normal|break-word;值    描述normal    只在允许的断字点换行（浏览器保持默认处理）。break-word    在长单词或 URL 地址内部进行换行。
+
+
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/超链接-a-中的文字自动换行/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://uncertainty.top/2017/11/15/HTML-5学习记录/HTML5-Input-类型/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="测不准">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="测不准">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/15/HTML-5学习记录/HTML5-Input-类型/" itemprop="url">HTML5-Input-类型</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
+                2017-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/HTML-5学习记录/" itemprop="url" rel="index">
+                    <span itemprop="name">HTML-5学习记录</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          http://www.w3school.com.cn/html5/html_5_form_input_types.asp
+
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/15/HTML-5学习记录/HTML5-Input-类型/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1770,7 +1769,7 @@ java 8 简明教程https://wizardforcel.gitbooks.io/modern-java/content/ch1.html
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/10/">10</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 
@@ -1820,7 +1819,7 @@ java 8 简明教程https://wizardforcel.gitbooks.io/modern-java/content/ch1.html
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">119</span>
+                  <span class="site-state-item-count">98</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
