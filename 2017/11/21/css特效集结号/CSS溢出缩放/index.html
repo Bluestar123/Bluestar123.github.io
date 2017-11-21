@@ -81,19 +81,25 @@
 
 
 
-<meta name="description" content="设计模式是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。总共有 23 种设计模式。这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Be">
+<meta name="description" content="CSS3增强用户界面，有关溢出、缩放、轮廓  本篇文章介绍CSS3中增强用户界面的关于溢出、缩放、轮廓、鼠标事件等属性。这些属性基本上得到大部分浏览器的支持，可以在代码中直接书写。   承接文章： CSS3盒模型尺寸计算方法，box-sizing属性的实用 技术等级：适合有一定CSS基础的认识阅读。   CSS3所提供">
 <meta property="og:type" content="article">
-<meta property="og:title" content="什么是设计模式-提纲掣领">
-<meta property="og:url" content="https://myzhiming.top/2017/11/15/设计模式解读/什么是设计模式-提纲掣领/index.html">
+<meta property="og:title" content="CSS内容属性2">
+<meta property="og:url" content="https://myzhiming.top/2017/11/21/css特效集结号/CSS溢出缩放/index.html">
 <meta property="og:site_name" content="测不准">
-<meta property="og:description" content="设计模式是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。总共有 23 种设计模式。这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。当然，我们还会讨论另一类设计模式：J2EE">
+<meta property="og:description" content="CSS3增强用户界面，有关溢出、缩放、轮廓  本篇文章介绍CSS3中增强用户界面的关于溢出、缩放、轮廓、鼠标事件等属性。这些属性基本上得到大部分浏览器的支持，可以在代码中直接书写。   承接文章： CSS3盒模型尺寸计算方法，box-sizing属性的实用 技术等级：适合有一定CSS基础的认识阅读。   CSS3所提供的增强用户界面的属性以及与此相关的书属性比较多：所包含的增强用户界面的属性有：">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-259907854d591d36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-11-18T00:04:05.032Z">
+<meta property="og:image" content="http://p3.pstatp.com/large/46e90002c204f3676482">
+<meta property="og:image" content="http://p3.pstatp.com/large/46ea00021e391d5f5fb8">
+<meta property="og:image" content="http://p9.pstatp.com/large/46e700047126f5d1d40c">
+<meta property="og:image" content="http://p3.pstatp.com/large/46e60004b2ad84de64c0">
+<meta property="og:image" content="http://p1.pstatp.com/large/46e700047108bb4eda0d">
+<meta property="og:image" content="http://p1.pstatp.com/large/46e800045e3637f2595f">
+<meta property="og:image" content="http://p3.pstatp.com/large/46e70004714365f6d36e">
+<meta property="og:updated_time" content="2017-11-21T01:26:50.771Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="什么是设计模式-提纲掣领">
-<meta name="twitter:description" content="设计模式是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。总共有 23 种设计模式。这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。当然，我们还会讨论另一类设计模式：J2EE">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2833665-259907854d591d36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="CSS内容属性2">
+<meta name="twitter:description" content="CSS3增强用户界面，有关溢出、缩放、轮廓  本篇文章介绍CSS3中增强用户界面的关于溢出、缩放、轮廓、鼠标事件等属性。这些属性基本上得到大部分浏览器的支持，可以在代码中直接书写。   承接文章： CSS3盒模型尺寸计算方法，box-sizing属性的实用 技术等级：适合有一定CSS基础的认识阅读。   CSS3所提供的增强用户界面的属性以及与此相关的书属性比较多：所包含的增强用户界面的属性有：">
+<meta name="twitter:image" content="http://p3.pstatp.com/large/46e90002c204f3676482">
 
 
 
@@ -123,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="https://myzhiming.top/2017/11/15/设计模式解读/什么是设计模式-提纲掣领/"/>
+  <link rel="canonical" href="https://myzhiming.top/2017/11/21/css特效集结号/CSS溢出缩放/"/>
 
 
 
 
 
-  <title>什么是设计模式-提纲掣领 | 测不准</title>
+  <title>CSS内容属性2 | 测不准</title>
   
 
 
@@ -280,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/设计模式解读/什么是设计模式-提纲掣领/">
+    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/21/css特效集结号/CSS溢出缩放/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -297,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">什么是设计模式-提纲掣领</h1>
+          <h1 class="post-title" itemprop="name headline">CSS内容属性2</h1>
         
 
         <div class="post-meta">
@@ -309,8 +315,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
-                2017-11-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-21T07:29:16+08:00">
+                2017-11-21
               </time>
             
 
@@ -319,28 +325,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/设计模式解读/" itemprop="url" rel="index">
-                    <span itemprop="name">设计模式解读</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -369,47 +353,117 @@
       
 
       
-        <p>设计模式是一套被反复使用、多数人知晓的、经过分类编目的、代码设计经验的总结。使用设计模式是为了可重用代码、让代码更容易被他人理解、保证代码可靠性。总共有 23 种设计模式。<br><strong>这些模式可以分为三大类：创建型模式（Creational Patterns）、结构型模式（Structural Patterns）、行为型模式（Behavioral Patterns）。当然，我们还会讨论另一类设计模式：J2EE 设计模式。</strong></p>
-<h1 id="创建型模式"><a href="#创建型模式" class="headerlink" title="创建型模式"></a>创建型模式</h1><p>这些设计模式提供了一种在创建对象的同时隐藏创建逻辑的方式，而不是使用 new 运算符直接实例化对象。这使得程序在判断针对某个给定实例需要创建哪些对象时更加灵活。    </p>
-<ol>
-<li>工厂模式（Factory Pattern）</li>
-<li>抽象工厂模式（Abstract Factory Pattern）</li>
-<li>单例模式（Singleton Pattern）</li>
-<li>建造者模式（Builder Pattern）</li>
-<li>原型模式（Prototype Pattern）<h1 id="结构型模式"><a href="#结构型模式" class="headerlink" title="结构型模式"></a>结构型模式</h1>这些设计模式关注类和对象的组合。继承的概念被用来组合接口和定义组合对象获得新功能的方式。    </li>
-<li>适配器模式（Adapter Pattern）</li>
-<li>桥接模式（Bridge Pattern）</li>
-<li>过滤器模式（Filter、Criteria Pattern）</li>
-<li>组合模式（Composite Pattern）</li>
-<li>装饰器模式（Decorator Pattern）</li>
-<li>外观模式（Facade Pattern）</li>
-<li>享元模式（Flyweight Pattern）</li>
-<li>代理模式（Proxy Pattern）<h1 id="行为型模式"><a href="#行为型模式" class="headerlink" title="行为型模式"></a>行为型模式</h1>这些设计模式特别关注对象之间的通信。    </li>
-<li>责任链模式（Chain of Responsibility Pattern）</li>
-<li>命令模式（Command Pattern）</li>
-<li>解释器模式（Interpreter Pattern）</li>
-<li>迭代器模式（Iterator Pattern）</li>
-<li>中介者模式（Mediator Pattern）</li>
-<li>备忘录模式（Memento Pattern）</li>
-<li>观察者模式（Observer Pattern）</li>
-<li>状态模式（State Pattern）</li>
-<li>空对象模式（Null Object Pattern）</li>
-<li>策略模式（Strategy Pattern）</li>
-<li>模板模式（Template Pattern）</li>
-<li>访问者模式（Visitor Pattern）<h1 id="J2EE-模式"><a href="#J2EE-模式" class="headerlink" title="J2EE 模式"></a>J2EE 模式</h1>这些设计模式特别关注表示层。这些模式是由 Sun Java Center 鉴定的。    </li>
-<li>MVC 模式（MVC Pattern）</li>
-<li>业务代表模式（Business Delegate Pattern）</li>
-<li>组合实体模式（Composite Entity Pattern）</li>
-<li>数据访问对象模式（Data Access Object Pattern）</li>
-<li>前端控制器模式（Front Controller Pattern）</li>
-<li>拦截过滤器模式（Intercepting Filter Pattern）</li>
-<li>服务定位器模式（Service Locator Pattern）</li>
-<li>传输对象模式（Transfer Object Pattern）、<h1 id="设计模式间的关系"><a href="#设计模式间的关系" class="headerlink" title="设计模式间的关系"></a>设计模式间的关系</h1></li>
-</ol>
-<p><img src="http://upload-images.jianshu.io/upload_images/2833665-259907854d591d36.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h1 id="设计模式的六大原则"><a href="#设计模式的六大原则" class="headerlink" title="设计模式的六大原则"></a>设计模式的六大原则</h1><blockquote>
-<p>1、开闭原则（Open Close Principle）<br>开闭原则的意思是：对扩展开放，对修改关闭。在程序需要进行拓展的时候，不能去修改原有的代码，实现一个热插拔的效果。简言之，是为了使程序的扩展性好，易于维护和升级。想要达到这样的效果，我们需要使用接口和抽象类，后面的具体设计中我们会提到这点。<br>2、里氏代换原则（Liskov Substitution Principle）<br>里氏代换原则是面向对象设计的基本原则之一。 里氏代换原则中说，任何基类可以出现的地方，子类一定可以出现。LSP 是继承复用的基石，只有当派生类可以替换掉基类，且软件单位的功能不受到影响时，基类才能真正被复用，而派生类也能够在基类的基础上增加新的行为。里氏代换原则是对开闭原则的补充。实现开闭原则的关键步骤就是抽象化，而基类与子类的继承关系就是抽象化的具体实现，所以里氏代换原则是对实现抽象化的具体步骤的规范。<br>3、依赖倒转原则（Dependence Inversion Principle）<br>这个原则是开闭原则的基础，具体内容：针对接口编程，依赖于抽象而不依赖于具体。<br>4、接口隔离原则（Interface Segregation Principle）<br>这个原则的意思是：使用多个隔离的接口，比使用单个接口要好。它还有另外一个意思是：降低类之间的耦合度。由此可见，其实设计模式就是从大型软件架构出发、便于升级和维护的软件设计思想，它强调降低依赖，降低耦合。<br>5、迪米特法则，又称最少知道原则（Demeter Principle）<br>最少知道原则是指：一个实体应当尽量少地与其他实体之间发生相互作用，使得系统功能模块相对独立。<br>6、合成复用原则（Composite Reuse Principle）<br>合成复用原则是指：尽量使用合成/聚合的方式，而不是使用继承。</p>
-</blockquote>
+        <h1 id="CSS3增强用户界面，有关溢出、缩放、轮廓"><a href="#CSS3增强用户界面，有关溢出、缩放、轮廓" class="headerlink" title="CSS3增强用户界面，有关溢出、缩放、轮廓"></a>CSS3增强用户界面，有关溢出、缩放、轮廓</h1>  <font color="#777">本篇文章介绍CSS3中增强用户界面的关于溢出、缩放、轮廓、鼠标事件等属性。这些属性基本上得到大部分浏览器的支持，可以在代码中直接书写。</font>
+
+
+<p>承接文章： <strong>CSS3盒模型尺寸计算方法，box-sizing属性的实用</strong></p>
+<p>技术等级：适合有一定CSS基础的认识阅读。</p>
+<center><img src="http://p3.pstatp.com/large/46e90002c204f3676482" alt="css3"></center>
+
+<p>CSS3所提供的增强用户界面的属性以及与此相关的书属性比较多：所包含的增强用户界面的属性有：</p>
+<ul>
+<li>box-shadow</li>
+<li>box-sizing</li>
+<li>overflow-x</li>
+<li>overflow-y</li>
+<li>resize</li>
+<li>outline</li>
+<li>pointer-events</li>
+<li>user-select</li>
+<li>appearence</li>
+<li>content</li>
+<li>counter-increment</li>
+<li>counter-reset</li>
+<li>quotes</li>
+</ul>
+<p><strong>一、全新的溢出设置</strong></p>
+<p>CSS3技术将原有的overflow属性划分为两个方向的溢出属性。</p>
+<ul>
+<li>overflow-x，设置水平方向的溢出解决方案。</li>
+<li>overflow-y，设置垂直方向的解决方案。</li>
+</ul>
+<p>这两个属性的取值和overflow属性相同，可以取如下值：</p>
+<ul>
+<li>auto,自动，当发生溢出的时候，才出现滚动条。</li>
+<li>visible，溢出的部分依然可见。</li>
+<li>hiddle，溢出的部分隐藏。</li>
+<li>scroll，若发生溢出，则强制显示滚动条。</li>
+</ul>
+<p><strong>二、任意元素都可以缩放</strong></p>
+<p>什么叫做元素缩放呢？我们来看看小伙伴们都非常熟悉的表单元素：多行文本域。</p>
+  <textarea name="introduce" rows="10" cols="30"></textarea>
+
+<p>下图为我们展示了多行文本域在Goole Chrome浏览器中的外观。</p>
+<center><img src="http://p3.pstatp.com/large/46ea00021e391d5f5fb8" alt="textarea"></center>
+
+
+<p>我们可以清晰地看出，在多行文本域的右下角有一个可以用来调整空间尺寸的位置图标，用户利用鼠标拖拽该图标就可以改变多行文本域的显示大小。</p>
+<p>如果希望一个普通的块级元素也具备该拖拽功能，那应该怎么解决呢？<br>CSS3提供了resize属性来完成该功能。</p>
+<center><img src="http://p9.pstatp.com/large/46e700047126f5d1d40c" alt="resize"></center>
+
+<p>该属性可以取如下值：</p>
+<ul>
+<li>none，块级元素不具备右下角拖拽图标。</li>
+<li>horizontal，块级元素具备改变水平方向宽度的拖拽图标。</li>
+<li>vertical，块级元素具备只可以改变垂直方向高度的拖拽图标。</li>
+<li>both，块级元素具备可以同时改变宽度和高度的拖拽图标。</li>
+</ul>
+<p><strong>1.该属性使用时必须结合溢出属性</strong></p>
+<p>要想让右下角的拖拽图标生效，必须设置块级元素的溢出属性，并且溢出属性的取值还不得为visible</p>
+<p><strong>2.可以结合下列CSS3属性来控制块级元素拖拽的尺寸范围</strong></p>
+<ul>
+<li>min-width，设置可拖拽的最小宽度。</li>
+<li>max-width,设置可拖拽范围的最大宽度。</li>
+<li>min-height,设置可拖拽范围的最小高度。</li>
+<li>max-height,设置可拖拽范围最大高度。</li>
+</ul>
+<p>让我们通过一个简单的实例来实现块级元素的缩放效果。</p>
+<p><strong>例1：</strong> 在页面中有一个div块级元素，其id属性取值为box，内部包含人以文本，设置该块级元素的宽度为200px，高度为200px，通过CSS3设置要求该块级元素能够自由缩放，且宽度和高度不超过400px。</p>
+<p>CSS代码如下所示：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">#box &#123;</span><br><span class="line">  width:200px;</span><br><span class="line">  height:200px;</span><br><span class="line">  overflow:hidden;</span><br><span class="line">  resize:both;</span><br><span class="line">  max-width:400px;</span><br><span class="line">  max-height:400px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>三、元素本身的轮廓：</strong><br>什么是元素轮廓呢？我们来看小伙伴们都非常熟悉的表单元素：文本域。</p>
+  <input type="text" name="nick">
+
+<p>下图为我们展示了文本域在Goole Chrome浏览器中获得鼠标焦点时的外观。</p>
+<center><img src="http://p3.pstatp.com/large/46e60004b2ad84de64c0" alt="focus"></center>
+
+<p>我们可以清晰的看出，当文本域获得鼠标焦点时，在其边框位置处又一圈淡蓝色的线条对其进行包裹，这就是文本框的轮廓。</p>
+<p>CSS3提供了outline及其派生属性元素的轮廓，其派生属性包括:</p>
+<ul>
+<li>outline-width,设置元素的轮廓宽度。</li>
+<li>outline-color,设置元素的轮廓颜色。</li>
+<li>outline-style,设置元素的轮廓样式。</li>
+</ul>
+<p>除此之外，CSS3还提供了用来设置轮廓便宜的属性：</p>
+<p>loutline-offset，该属性不是outline属性的派生属性，因此必须单独使用。</p>
+<p>属性outline的取值格式如下所示：</p>
+  <font color="#777">outline:outline-style,outline-width,outline-color</font>
+
+<p>要想去掉表单元素中自带的轮廓属性，可以设置outline属性的取值为none。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">input[type=text]:focus &#123;</span><br><span class="line">  outline:none</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>例2</strong> 我们来为一个块级元素设置轮廓效果。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">#box &#123;</span><br><span class="line">  outline:solid 1px #7a9cd3;</span><br><span class="line">  outline-offset:10px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>下图为我们展示了上段CSS代码中轮廓的效果。</p>
+<center><img src="http://p1.pstatp.com/large/46e700047108bb4eda0d" alt="outline"></center>
+
+
+<p>默认情况下，轮廓会占据边框的位置，由于outline-offset属性的设置，可以看出，轮廓从边框位置向外偏移了10px的距离。</p>
+<p><strong>四、对元素取消鼠标事件</strong></p>
+<p>CSS3提供了一个名为pointer-events的属性，用来设置对象不能成为鼠标事件的目标。</p>
+<p>该属性的取值较多，但是大部分取值主流浏览器尚不支持，当该属性取值为none时，对象就不再是鼠标事件的目标了。</p>
+<center><img src="http://p1.pstatp.com/large/46e800045e3637f2595f" alt="pointer-events"></center>
+
+<p>若设置了对象不再是鼠标的时间目标，则该对象上绑定的事件代码将不再生效。鼠标单击该对象时，这个鼠标动作会自动作用在该对象下方的对象上。</p>
+<p><strong>五、是否允许选中文本</strong></p>
+<p>CSS3提供了一个名为user-select的属性，用来设置在页面中是否允许文本被选中。</p>
+<center><img src="http://p3.pstatp.com/large/46e70004714365f6d36e" alt="user-select"></center>
+
+<p>该属性可以取如下值：</p>
+<ul>
+<li>none，对象内部的文本不允许被选中。</li>
+<li>text，对象内部的文本允许被选中。</li>
+<li>all，对象内部的文本只允许作为一个整体被选中。</li>
+</ul>
+<p>在CSS2时代，要想让页面文本不允许被鼠标选中，只能使用javascript技术编写代码。有了user-select属性，实现这一效果变得更加简单。</p>
 
       
     </div>
@@ -463,8 +517,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/15/有毒的文字/年轻人，吃亏要趁早/" rel="next" title="年轻人，吃亏要趁早">
-                <i class="fa fa-chevron-left"></i> 年轻人，吃亏要趁早
+              <a href="/2017/11/20/css特效集结号/css底部阴影/" rel="next" title="css底部阴影">
+                <i class="fa fa-chevron-left"></i> css底部阴影
               </a>
             
           </div>
@@ -473,8 +527,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/15/设计模式解读/代理模式/" rel="prev" title="代理模式">
-                代理模式 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/11/21/css特效集结号/CSS实现页面中间弹出层/" rel="prev" title="CSS实现页面中间弹出层">
+                CSS实现页面中间弹出层 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -556,7 +610,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">62</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -567,7 +621,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -654,7 +708,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#创建型模式"><span class="nav-number">1.</span> <span class="nav-text">创建型模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结构型模式"><span class="nav-number">2.</span> <span class="nav-text">结构型模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#行为型模式"><span class="nav-number">3.</span> <span class="nav-text">行为型模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#J2EE-模式"><span class="nav-number">4.</span> <span class="nav-text">J2EE 模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式间的关系"><span class="nav-number">5.</span> <span class="nav-text">设计模式间的关系</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设计模式的六大原则"><span class="nav-number">6.</span> <span class="nav-text">设计模式的六大原则</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3增强用户界面，有关溢出、缩放、轮廓"><span class="nav-number">1.</span> <span class="nav-text">CSS3增强用户界面，有关溢出、缩放、轮廓</span></a></li></ol></div>
             
 
           </div>

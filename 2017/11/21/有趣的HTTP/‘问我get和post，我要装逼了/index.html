@@ -81,19 +81,25 @@
 
 
 
-<meta name="description" content="定义解释器模式（Interpreter Pattern）提供了评估语言的语法或表达式的方式，它属于行为型模式。这种模式实现了一个表达式接口，该接口解释一个特定的上下文。这种模式被用在 SQL 解析、符号处理引擎等。 实现我们将创建一个接口 Expression 和实现了 Expression 接口的实体类。定义作为上下">
+<meta name="description" content="敢问我post和get，别怪我要装逼了好多同学面试几乎都会被问到post和get有什么区别，肯定很多同学和我一样说了一大堆什么post更加安全，post传输数据更多这样的答案，网上一搜也是一堆。但是有时候面试官还是问你，还有呢？看这期小编整理的资料给大家分享。 GET和POST是HTTP请求的两种基本方法，要说他们的区">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解释器模式">
-<meta property="og:url" content="https://myzhiming.top/2017/11/15/设计模式解读/解释器模式/index.html">
+<meta property="og:title" content="问我get和post，我要装逼了">
+<meta property="og:url" content="https://myzhiming.top/2017/11/21/有趣的HTTP/‘问我get和post，我要装逼了/index.html">
 <meta property="og:site_name" content="测不准">
-<meta property="og:description" content="定义解释器模式（Interpreter Pattern）提供了评估语言的语法或表达式的方式，它属于行为型模式。这种模式实现了一个表达式接口，该接口解释一个特定的上下文。这种模式被用在 SQL 解析、符号处理引擎等。 实现我们将创建一个接口 Expression 和实现了 Expression 接口的实体类。定义作为上下文中主要解释器的 TerminalExpression 类。其他的类 OrExp">
+<meta property="og:description" content="敢问我post和get，别怪我要装逼了好多同学面试几乎都会被问到post和get有什么区别，肯定很多同学和我一样说了一大堆什么post更加安全，post传输数据更多这样的答案，网上一搜也是一堆。但是有时候面试官还是问你，还有呢？看这期小编整理的资料给大家分享。 GET和POST是HTTP请求的两种基本方法，要说他们的区别，接触过WEB开发的人都能说出几个。 最直观的就是GET把参数写在URL中，P">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-a356b5fb597b591b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-11-18T00:04:05.052Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/3/704c3c7237bbf9b5ad9e558514d4ff53?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/3/eb4f1bc717c233777bd63cfda1c278be?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/3/d68bcbd783af3fbbeffde6975db61953?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/3/3da645086467d8ab99794788aa5522ce?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/3/dd1984ae9855f9640fcdb65b2226ff99?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/3/b322fad6f882459b1fabd14203962ea7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2017/11/3/dc6d7338e9a0076701443288e7075002?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
+<meta property="og:updated_time" content="2017-11-21T13:56:36.428Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解释器模式">
-<meta name="twitter:description" content="定义解释器模式（Interpreter Pattern）提供了评估语言的语法或表达式的方式，它属于行为型模式。这种模式实现了一个表达式接口，该接口解释一个特定的上下文。这种模式被用在 SQL 解析、符号处理引擎等。 实现我们将创建一个接口 Expression 和实现了 Expression 接口的实体类。定义作为上下文中主要解释器的 TerminalExpression 类。其他的类 OrExp">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2833665-a356b5fb597b591b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="问我get和post，我要装逼了">
+<meta name="twitter:description" content="敢问我post和get，别怪我要装逼了好多同学面试几乎都会被问到post和get有什么区别，肯定很多同学和我一样说了一大堆什么post更加安全，post传输数据更多这样的答案，网上一搜也是一堆。但是有时候面试官还是问你，还有呢？看这期小编整理的资料给大家分享。 GET和POST是HTTP请求的两种基本方法，要说他们的区别，接触过WEB开发的人都能说出几个。 最直观的就是GET把参数写在URL中，P">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2017/11/3/704c3c7237bbf9b5ad9e558514d4ff53?imageView2/0/w/1280/h/960/format/webp/ignore-error/1">
 
 
 
@@ -123,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="https://myzhiming.top/2017/11/15/设计模式解读/解释器模式/"/>
+  <link rel="canonical" href="https://myzhiming.top/2017/11/21/有趣的HTTP/‘问我get和post，我要装逼了/"/>
 
 
 
 
 
-  <title>解释器模式 | 测不准</title>
+  <title>问我get和post，我要装逼了 | 测不准</title>
   
 
 
@@ -280,7 +286,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/设计模式解读/解释器模式/">
+    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/21/有趣的HTTP/‘问我get和post，我要装逼了/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -297,7 +303,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">解释器模式</h1>
+          <h1 class="post-title" itemprop="name headline">问我get和post，我要装逼了</h1>
         
 
         <div class="post-meta">
@@ -309,8 +315,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
-                2017-11-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-21T20:48:25+08:00">
+                2017-11-21
               </time>
             
 
@@ -332,8 +338,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/设计模式解读/" itemprop="url" rel="index">
-                    <span itemprop="name">设计模式解读</span>
+                  <a href="/categories/有趣的HTTP/" itemprop="url" rel="index">
+                    <span itemprop="name">有趣的HTTP</span>
                   </a>
                 </span>
 
@@ -369,8 +375,52 @@
       
 
       
-        <h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>解释器模式（Interpreter Pattern）提供了评估语言的语法或表达式的方式，它属于行为型模式。这种模式实现了一个表达式接口，该接口解释一个特定的上下文。这种模式被用在 SQL 解析、符号处理引擎等。</p>
-<h1 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h1><p>我们将创建一个接口 Expression 和实现了 Expression 接口的实体类。定义作为上下文中主要解释器的 TerminalExpression 类。其他的类 OrExpression、AndExpression 用于创建组合式表达式。<br>InterpreterPatternDemo，我们的演示类使用 Expression 类创建规则和演示表达式的解析。<br><img src="http://upload-images.jianshu.io/upload_images/2833665-a356b5fb597b591b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">步骤 1</span><br><span class="line">创建一个表达式接口。</span><br><span class="line">Expression.java</span><br><span class="line">public interface Expression &#123;</span><br><span class="line">   public boolean interpret(String context);</span><br><span class="line">&#125;</span><br><span class="line">步骤 2</span><br><span class="line">创建实现了上述接口的实体类。</span><br><span class="line">TerminalExpression.java</span><br><span class="line">public class TerminalExpression implements Expression &#123;</span><br><span class="line">	</span><br><span class="line">   private String data;</span><br><span class="line"></span><br><span class="line">   public TerminalExpression(String data)&#123;</span><br><span class="line">      this.data = data; </span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   @Override</span><br><span class="line">   public boolean interpret(String context) &#123;</span><br><span class="line">      if(context.contains(data))&#123;</span><br><span class="line">         return true;</span><br><span class="line">      &#125;</span><br><span class="line">      return false;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">OrExpression.java</span><br><span class="line">public class OrExpression implements Expression &#123;</span><br><span class="line">	 </span><br><span class="line">   private Expression expr1 = null;</span><br><span class="line">   private Expression expr2 = null;</span><br><span class="line"></span><br><span class="line">   public OrExpression(Expression expr1, Expression expr2) &#123; </span><br><span class="line">      this.expr1 = expr1;</span><br><span class="line">      this.expr2 = expr2;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   @Override</span><br><span class="line">   public boolean interpret(String context) &#123;		</span><br><span class="line">      return expr1.interpret(context) || expr2.interpret(context);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">AndExpression.java</span><br><span class="line">public class AndExpression implements Expression &#123;</span><br><span class="line">	 </span><br><span class="line">   private Expression expr1 = null;</span><br><span class="line">   private Expression expr2 = null;</span><br><span class="line"></span><br><span class="line">   public AndExpression(Expression expr1, Expression expr2) &#123; </span><br><span class="line">      this.expr1 = expr1;</span><br><span class="line">      this.expr2 = expr2;</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   @Override</span><br><span class="line">   public boolean interpret(String context) &#123;		</span><br><span class="line">      return expr1.interpret(context) &amp;&amp; expr2.interpret(context);</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">步骤 3</span><br><span class="line">InterpreterPatternDemo 使用 Expression 类来创建规则，并解析它们。</span><br><span class="line">InterpreterPatternDemo.java</span><br><span class="line">public class InterpreterPatternDemo &#123;</span><br><span class="line"></span><br><span class="line">   //规则：Robert 和 John 是男性</span><br><span class="line">   public static Expression getMaleExpression()&#123;</span><br><span class="line">      Expression robert = new TerminalExpression(&quot;Robert&quot;);</span><br><span class="line">      Expression john = new TerminalExpression(&quot;John&quot;);</span><br><span class="line">      return new OrExpression(robert, john);		</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   //规则：Julie 是一个已婚的女性</span><br><span class="line">   public static Expression getMarriedWomanExpression()&#123;</span><br><span class="line">      Expression julie = new TerminalExpression(&quot;Julie&quot;);</span><br><span class="line">      Expression married = new TerminalExpression(&quot;Married&quot;);</span><br><span class="line">      return new AndExpression(julie, married);		</span><br><span class="line">   &#125;</span><br><span class="line"></span><br><span class="line">   public static void main(String[] args) &#123;</span><br><span class="line">      Expression isMale = getMaleExpression();</span><br><span class="line">      Expression isMarriedWoman = getMarriedWomanExpression();</span><br><span class="line"></span><br><span class="line">      System.out.println(&quot;John is male? &quot; + isMale.interpret(&quot;John&quot;));</span><br><span class="line">      System.out.println(&quot;Julie is a married women? &quot; </span><br><span class="line">      + isMarriedWoman.interpret(&quot;Married Julie&quot;));</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line">步骤 4</span><br><span class="line">验证输出。</span><br><span class="line">John is male? true</span><br><span class="line">Julie is a married women? true</span><br></pre></td></tr></table></figure></p>
+        <h1 id="敢问我post和get，别怪我要装逼了"><a href="#敢问我post和get，别怪我要装逼了" class="headerlink" title="敢问我post和get，别怪我要装逼了"></a>敢问我post和get，别怪我要装逼了</h1><p>好多同学面试几乎都会被问到post和get有什么区别，肯定很多同学和我一样说了一大堆什么post更加安全，post传输数据更多这样的答案，网上一搜也是一堆。但是有时候面试官还是问你，还有呢？看这期小编整理的资料给大家分享。</p>
+<p>GET和POST是HTTP请求的两种基本方法，要说他们的区别，接触过WEB开发的人都能说出几个。</p>
+<p>最直观的就是GET把参数写在URL中，POST通过request.body传递参数。<br>你可能自己切身写过很多GET和POST请求，或者已经看到很多权威网站总结出的他们的区别，你非常清楚什么时候用。</p>
+<p>当你在面试中被问到这个问题的时候，你的内心充满了自信和喜悦。</p>
+<center><img src="https://user-gold-cdn.xitu.io/2017/11/3/704c3c7237bbf9b5ad9e558514d4ff53?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="easy"></center>
+
+<p>你轻轻松松的给出了一个“标准答案”：<br>  GET在浏览器回退时是无害的，而POST会再次提交请求。GET产生的URL地址可以被Bookmark，而POST不可以。GET请求会被浏览器主动cache，而POST不会，除非手动设置。GET请求只能进行URL编码，而POST支持多种编码方式。GET请求参数会被完整保留在浏览器历史记录里面，而POST中的参数不会被保留。GET请求在URL中传送的参数是有长度限制的，而POST没有。对参数的数据类型，GET只接受ASCII字符，而POST没有限制。GET比POST更不安全，因为参数直接暴露在URL上，所以不能用来传递敏感信息。GET参数通过URL传递，POST放在Request.body中。</p>
+<p>  “很遗憾，这不是我们想要的答案！！！”</p>
+  <center><img src="https://user-gold-cdn.xitu.io/2017/11/3/eb4f1bc717c233777bd63cfda1c278be?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="answer"></center>
+
+<p>请告诉我真相……..</p>
+<p>如果我说GET和POST没有本质区别你信么？</p>
+<p>让我们扒下GET和POST的外衣，坦诚相见吧！</p>
+<center><img src="https://user-gold-cdn.xitu.io/2017/11/3/d68bcbd783af3fbbeffde6975db61953?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="get"></center>
+
+<p>GET和POST是什么？HTTP协议中的两种发送请求的方法。</p>
+<p>HTTP协议是什么？HTTP是基于TCP/IP的关于数据如何在万维网中通信的协议。</p>
+<p>HTTP的底层是TCP/IP。所以说GET和POST的底层也是TCP/IP，也就是说，GET/POST都是TCP链接。GET和POST能做的事情是一样的。你要给GET加上request.body，给POST带上URL参数，技术上是完全行得通的。</p>
+<p>那么，“标准答案”里的哪些区别是怎么回事呢？</p>
+<center><img src="https://user-gold-cdn.xitu.io/2017/11/3/3da645086467d8ab99794788aa5522ce?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="answer"></center>
+
+<p>在万维网世界中，TCP就像汽车，我们用TCP来运输数据，他很可靠，从来不会发生丢件少件的现象。但是如果路上跑的全是看起来一摸一样的汽车，那么这个世界看起来是一团混乱，送急件的汽车可能被前面满载货物的汽车拦堵在路上，整个交通系统一定会瘫痪。为了避免这种情况的发生，交通规则HTTP诞生了。HTTP给汽车运输设定了好几个服务类别，有GET,POST,DELETE,PUT等，HTTP规定，当执行GET请求的时候，要给汽车贴上GET的标签（设置method为GET），而且要求把传送的数据放在车顶上（url中）以方便记录。如果是POST请求，就要在车上贴上POST的标签，并把货物放在车厢里。当然，你也可以在GET的时候往车厢内偷偷藏点货物，但是这是很不光彩，也可以在POST的时候在车顶放一些数据，让人觉得傻乎乎的。HTTP只是个行为准则，而TCP才是GET和POST怎么实现的基本。</p>
+<p>但是，我们只看到HTTP对GET和POST参数的传送渠道（url还是request.body）提出了要求。“标准答案”里关于参数大小的限制又是从哪里来的呢？</p>
+<center><img src="https://user-gold-cdn.xitu.io/2017/11/3/dd1984ae9855f9640fcdb65b2226ff99?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt=".."></center>
+
+
+<p>在万维网中，还有另一个重要的角色：运输公司。不同的浏览器（发起http请求）和服务器（接受http请求）就是不同的运输公司。虽然理论上，你可以在车顶上无限的堆货物(url中无限加参数)。但是运输公司可不傻，装货和卸货也是有很大成本的，他们会限制单次运输量来控制风险，数据量太大对浏览器和服务器都是很大的负担。业界不成文的规定是：大多数浏览器通常会限制url长度在2k个字节，而大多数服务器最多处理64k大小的url。超过的部分，恕不处理。如果你用GET服务，在request.body偷偷藏了数据，不同的服务器的处理方式也有所不同，有些服务器会帮你卸货，读出数据，有些服务器直接忽略，所以，虽然GET可以带request.body,也不能一定保证能被接收到。</p>
+<p>好饿啦现在你知道GET和PSOT本质上就是TCP链接，并无差别。但是由于HTTP的规定和浏览器/服务器的限制，导致他们在应用过程中体现出一些不同。</p>
+<p>你以为本文就这样结束了？？</p>
+<center><img src="https://user-gold-cdn.xitu.io/2017/11/3/b322fad6f882459b1fabd14203962ea7?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="next"></center>
+
+<p>我们的大boss还没有出场呢。。。。</p>
+<p>这位boss有多神秘？当你试图在网上找GET和POST的区别是，那些你会看到的搜索结果了，都没有提到他。他。。。。</p>
+<p>GET和POST还有个重大区别，简单说就是：</p>
+<p>GET产生一个TCP数据包，POST产生两个TCP数据包。</p>
+<p>长地说：<br>  对于GET方式的请求，浏览器会把http的header和data一并发送出去，服务器响应200（返回数据）</p>
+<p>  而对POST，浏览器先发送header，服务器响应100 continue,浏览器在发送data，服务器响应200 ok（返回数据）</p>
+<p>  也就是说。GET只需要汽车跑一趟就把货送到了，而POST得跑两趟，第一趟，先去和服务器打个招呼“等会我送一批货物过来，你们大开门迎接我”，然后再回头把货物送过去。</p>
+<p>因为POST需要两步，时间上消耗的要多一点，看起来GET比POST更有效，因此Yahoo团队推荐使用GET替换POST来优化网站性能。但这是一个坑，跳入需谨慎。为什么呢？？</p>
+<ul>
+<li>GET和POST都有自己的语义，不能随意混用。</li>
+<li>据研究，在网络环境良好的情况下，发一次包的事件和发两次包的时间差别基本可以无视。而在网络环境差的情况下，两次包的TCP在验证数据包完整性上，有非常大的优点。</li>
+<li>并不是所有的浏览器都会在POST中发送两次包，FireFox就只发送一次。</li>
+</ul>
+<p>现在，当面试官再问你“GET和POST的区别时，你的内心会是这样的——”</p>
+<center><img src="https://user-gold-cdn.xitu.io/2017/11/3/dc6d7338e9a0076701443288e7075002?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="final"></center>
 
       
     </div>
@@ -424,8 +474,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/15/设计模式解读/责任链模式/" rel="next" title="责任链模式">
-                <i class="fa fa-chevron-left"></i> 责任链模式
+              <a href="/2017/11/21/css特效集结号/CSS实现页面中间弹出层/" rel="next" title="CSS实现页面中间弹出层">
+                <i class="fa fa-chevron-left"></i> CSS实现页面中间弹出层
               </a>
             
           </div>
@@ -433,10 +483,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/15/设计模式解读/装饰器模式/" rel="prev" title="装饰器模式">
-                装饰器模式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -517,7 +563,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">62</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -528,7 +574,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -615,7 +661,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#定义"><span class="nav-number">1.</span> <span class="nav-text">定义</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#实现"><span class="nav-number">2.</span> <span class="nav-text">实现</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#敢问我post和get，别怪我要装逼了"><span class="nav-number">1.</span> <span class="nav-text">敢问我post和get，别怪我要装逼了</span></a></li></ol></div>
             
 
           </div>

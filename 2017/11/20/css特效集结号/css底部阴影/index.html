@@ -81,17 +81,20 @@
 
 
 
-<meta name="description" content="我是阴影">
+<meta name="description" content="CSS3高级的box-shadow阴影效果自从CSS3出来以后，各种炫酷的效果就出现了。box-shadow属性是用来创建阴影效果的。简单叙述一下他的参数： box-shadow:  h-shadow v-shadow blue spread color inset; h-shadow: 必填项，表示水平（x轴）阴影的">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css底部阴影">
 <meta property="og:url" content="https://myzhiming.top/2017/11/20/css特效集结号/css底部阴影/index.html">
 <meta property="og:site_name" content="测不准">
-<meta property="og:description" content="我是阴影">
+<meta property="og:description" content="CSS3高级的box-shadow阴影效果自从CSS3出来以后，各种炫酷的效果就出现了。box-shadow属性是用来创建阴影效果的。简单叙述一下他的参数： box-shadow:  h-shadow v-shadow blue spread color inset; h-shadow: 必填项，表示水平（x轴）阴影的位置。正值使阴影出现在元素的右边，负值出现在元素的左边。 v-shadow: 必">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-11-20T05:43:15.878Z">
+<meta property="og:image" content="http://p3.pstatp.com/large/43820003fc2bf907a15c">
+<meta property="og:image" content="http://p9.pstatp.com/large/438600000158242b0808">
+<meta property="og:updated_time" content="2017-11-21T11:39:13.357Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css底部阴影">
-<meta name="twitter:description" content="我是阴影">
+<meta name="twitter:description" content="CSS3高级的box-shadow阴影效果自从CSS3出来以后，各种炫酷的效果就出现了。box-shadow属性是用来创建阴影效果的。简单叙述一下他的参数： box-shadow:  h-shadow v-shadow blue spread color inset; h-shadow: 必填项，表示水平（x轴）阴影的位置。正值使阴影出现在元素的右边，负值出现在元素的左边。 v-shadow: 必">
+<meta name="twitter:image" content="http://p3.pstatp.com/large/43820003fc2bf907a15c">
 
 
 
@@ -367,7 +370,26 @@
       
 
       
-        <p>我是阴影</p>
+        <h1 id="CSS3高级的box-shadow阴影效果"><a href="#CSS3高级的box-shadow阴影效果" class="headerlink" title="CSS3高级的box-shadow阴影效果"></a>CSS3高级的box-shadow阴影效果</h1><p>自从CSS3出来以后，各种炫酷的效果就出现了。box-shadow属性是用来创建阴影效果的。<br>简单叙述一下他的参数：</p>
+<p><strong>box-shadow:</strong>  <em>h-shadow</em> <em>v-shadow</em> <em>blue</em> <em>spread</em> <em>color</em> <em>inset</em>;</p>
+<p><strong>h-shadow:</strong> 必填项，表示水平（x轴）阴影的位置。正值使阴影出现在元素的右边，负值出现在元素的左边。</p>
+<p><strong>v-shadow:</strong> 必填项，表示垂直（即Y轴）阴影的位置。正值使阴影出现在元素的下边，负值出现在元素的上边。</p>
+<p><strong>blur:</strong> 可选，表示模糊距离。模糊数值越大，尖锐度越小，阴影越朦胧和模糊。负值是不被允许的，并会被处理成0.</p>
+<p><strong>spread:</strong> 可选，表示阴影的尺寸。可以理解为从元素到阴影的距离。正值会让阴影向各个方向按照指定的数值延伸。负值会让阴影收缩的比元素本身尺寸更小。</p>
+<p><strong>color:</strong> 可选，表示阴影的颜色。这个不需要我多说了吧，大家都懂。</p>
+<p><strong>inset:</strong> 可选，将外部阴影（outset）改为内部阴影。默认为outset</p>
+<p>下面可以灵活的运用这个属性了。这里介绍下不常见的效果。</p>
+<ul>
+<li>利用阴影现实向上浮动效果</li>
+</ul>
+<p>原理就是在元素下边增加一个阴影，鼠标一上去的时候让阴影缩小，并让元素往上移！</p>
+<p>样式如下：</p>
+<center><img src="http://p3.pstatp.com/large/43820003fc2bf907a15c" alt="before"></center>
+
+<center><img src="http://p9.pstatp.com/large/438600000158242b0808" alt="after"></center>
+
+<p>实现代码如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">html:</span><br><span class="line">    &lt;div id=&quot;box5&quot;&gt;&lt;/div&gt;</span><br><span class="line"></span><br><span class="line">CSS:</span><br><span class="line">    div&#123;</span><br><span class="line">      width:200px;</span><br><span class="line">      height:200px;</span><br><span class="line">      background:#62fa69;</span><br><span class="line">      margin:80px;</span><br><span class="line">    &#125;</span><br><span class="line">    #box5 &#123;</span><br><span class="line">      position:relative; /*原始Y轴位置*/</span><br><span class="line">      transform:translateY(1);/*鼠标移开后恢复原始位置，1s延迟*/  </span><br><span class="line">      transition:all .8s;</span><br><span class="line">    &#125;</span><br><span class="line">    /*创造一个伪元素，用来放阴影，并且不增加新的dom元素*/</span><br><span class="line">    #box5:after &#123;</span><br><span class="line">      content:&quot;&quot;;</span><br><span class="line">      display:block;</span><br><span class="line">      position:absolute;</span><br><span class="line">      bottom:-50px;</span><br><span class="line">      left:0;</span><br><span class="line">      height:14px;</span><br><span class="line">      width:100%;</span><br><span class="line">      background:#ccc;</span><br><span class="line">      border-radius:50%;</span><br><span class="line">      box-shadow:0 0 15px 10px #ccc;</span><br><span class="line">      transform:translateY(1);</span><br><span class="line">      transition:all .8s;</span><br><span class="line">    &#125;</span><br><span class="line">    #box5:hover &#123;</span><br><span class="line">      /*Y轴上移50px*/</span><br><span class="line">      transform:translateY(-50px);</span><br><span class="line">      /*延迟1s上移*/</span><br><span class="line">      transition:all 1s;</span><br><span class="line">    &#125;</span><br><span class="line">    #box:hover:after &#123;</span><br><span class="line">      /*Y轴上移20px，缩小0.7倍，有一种远去的效果*/</span><br><span class="line">      transform:translateY(-20px) scale(0.7);</span><br><span class="line">      transition:all 1s;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>如果有帮助到大家，也可以给小编来点赞助！下期见！</p>
 
       
     </div>
@@ -431,7 +453,7 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/21/CSS溢出缩放/" rel="prev" title="CSS内容属性2">
+              <a href="/2017/11/21/css特效集结号/CSS溢出缩放/" rel="prev" title="CSS内容属性2">
                 CSS内容属性2 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -485,8 +507,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -505,7 +536,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">99</span>
+                  <span class="site-state-item-count">62</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -516,7 +547,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
@@ -593,6 +624,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CSS3高级的box-shadow阴影效果"><span class="nav-number">1.</span> <span class="nav-text">CSS3高级的box-shadow阴影效果</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
