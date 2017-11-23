@@ -278,154 +278,6 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/有毒的文字/我想和你虚度时光/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="测不准">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/touxiang.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="测不准">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/11/15/有毒的文字/我想和你虚度时光/" itemprop="url">我想和你虚度时光</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
-                2017-11-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/有毒的文字/" itemprop="url" rel="index">
-                    <span itemprop="name">有毒的文字</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          我想和你虚度时光，比如低头看鱼比如把茶杯留在桌子上，离开浪费它们好看的阴影我还想连落日一起浪费，比如散步一直消磨到星光满天我还要浪费风起的时候坐在走廊发呆，直到你眼中乌云全部被吹到窗外我已经虚度了世界，它经过我疲倦，又像从未被爱过但是明天我还要这样，虚度满目的花草，生活应该像它们一样美好一样无意义，像被虚度的电影那些绝望的爱和赴死为我们带来短暂的沉默我想和你互相浪费一起虚度短的沉默，长的无意义一起
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/有毒的文字/我想和你虚度时光/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/有毒的文字/是不是一个人太久了，总觉得时间在翻倍的过。我不知道自己在找什么，只觉得丢了很多…………/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -726,7 +578,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/log4j-properties配置详解/">
+    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/-Linux下Tomcat的启动、关闭、杀死进程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -745,7 +597,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/log4j-properties配置详解/" itemprop="url">log4j-properties配置详解</a></h1>
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/-Linux下Tomcat的启动、关闭、杀死进程/" itemprop="url">-Linux下Tomcat的启动、关闭、杀死进程</a></h1>
         
 
         <div class="post-meta">
@@ -819,13 +671,314 @@
       
         
           
-          ````1. 配置文件Log4J配置文件的基本格式如下：
-#配置根Loggerlog4j.rootLogger  =   [ level ]   ,  appenderName1 ,  appenderName2 ,  …
-#配置日志信息输出目的地Appenderlog4j.appender.appenderName  =  fully.qualified.name.of.appender.cla
+          打开终端cd /java/tomcat
+#执行bin/startup.sh #启动tomcatbin/shutdown.sh #停止tomcattail -f logs/catalina.out #看tomcat的控制台输出；
+#看是否已经有tomcat在运行了ps -ef |grep tomcat
+#如果有，用kill;kill -9 pid #pid 为相应的进程号
+例如 ps -ef |gr
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/log4j-properties配置详解/#more" rel="contents">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/-Linux下Tomcat的启动、关闭、杀死进程/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/AngularJS上传下载文件及$http总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="测不准">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="测不准">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/AngularJS上传下载文件及$http总结/" itemprop="url">AngularJS上传下载文件及$http总结</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
+                2017-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/我是一枚程序员/" itemprop="url" rel="index">
+                    <span itemprop="name">我是一枚程序员</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          AngularJS上传下载文件及$http总结https://my.oschina.net/u/3298482/blog/903847
+
+          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/AngularJS上传下载文件及$http总结/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/https-页面中引入-http-资源的解决方式/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="测不准">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="测不准">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/https-页面中引入-http-资源的解决方式/" itemprop="url">https-页面中引入-http-资源的解决方式</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
+                2017-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/我是一枚程序员/" itemprop="url" rel="index">
+                    <span itemprop="name">我是一枚程序员</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          https://segmentfault.com/a/1190000004200361
+而且如果在一个 https 页面里动态的引入 http 资源，比如引入一个 js 文件，会被直接 block 掉的。Chrome v21 之后，在 SSL 加密页面 embed 非 SSL 的 Flash 资源也会被默默的屏蔽掉，只留下一句 console 报告。解决方式
+相对协议如果你的网站同时准备了 htt
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/https-页面中引入-http-资源的解决方式/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -917,7 +1070,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">64</span>
+                  <span class="site-state-item-count">65</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -928,7 +1081,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">分类</span>
                 
               </div>
