@@ -73,41 +73,57 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[不管怎样，你要善良]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%9C%89%E6%AF%92%E7%9A%84%E6%96%87%E5%AD%97%2F%E4%B8%8D%E7%AE%A1%E6%80%8E%E6%A0%B7%EF%BC%8C%E4%BD%A0%E8%A6%81%E5%96%84%E8%89%AF%2F</url>
-    <content type="text"><![CDATA[人们经常是不讲道理的、没有逻辑的和以自我为中心的 不管怎样，你要原谅他们 即使你是友善的，人们可能还是会说你自私和动机不良 不管怎样，你还是要友善 当你功成名就，你会有一些虚假的朋友 和一些真实的敌人 不管怎样，你还是要取得成功 即使你是诚实的和率直的，人们可能还是会欺骗你 不管怎样，你还是要诚实和率直 你多年来营造的东西 有人在一夜之间把它摧毁 不管怎样，你还是要去营造 如果你找到了平静和幸福，他们可能会嫉妒你 不管怎样，你还是要快乐 你今天做的善事，人们往往明天就会忘记 不管怎样，你还是要做善事 即使把你最好的东西给了这个世界 也许这些东西永远都不够 不管怎样，把你最好的东西给这个世界 你看，说到底，它是你和上帝之间的事 而决不是你和他人之间的事]]></content>
-      <categories>
-        <category>有毒的文字</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[超链接-a-中的文字自动换行]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E8%B6%85%E9%93%BE%E6%8E%A5-a-%E4%B8%AD%E7%9A%84%E6%96%87%E5%AD%97%E8%87%AA%E5%8A%A8%E6%8D%A2%E8%A1%8C%2F</url>
-    <content type="text"><![CDATA[css3：word-wrap:break-word 语法word-wrap: normal|break-word;值 描述normal 只在允许的断字点换行（浏览器保持默认处理）。break-word 在长单词或 URL 地址内部进行换行。]]></content>
+    <title><![CDATA[Git，GitHub，码云，Git-Tortoise，完整配置流程]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2FGit%EF%BC%8CGitHub%EF%BC%8C%E7%A0%81%E4%BA%91%EF%BC%8CGit-Tortoise%EF%BC%8C%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[本文适用于github，码云，git协同工具工作的小伙伴，你可以选择git自带命令行协同工作，如果你嫌命令行麻烦，可以安装一个封装了命令行的图形用户界面的软件，git-tortoise进行协同工作。 本文需要频繁使用cmd，如果使用系统的cmd会稍微有点不便所以这里先推荐一款Windows平台上面个人觉得比较好用的一款cmd工具ConEmu ConEmu下载地址：http://www.fosshub.com/ConEmu.html 1. 安装Git，TortoiseGit，准备好Android SDK本文使用版本如下，在Win10上配置，已提供文件的下载地址，如需最新版本可进入官网地址下载。具体的安装步骤本文不做介绍，按照自己的使用习惯自己配置即可。 Git: git-1.8.3-windows-1374045102000.exe 下载地址：https://pan.baidu.com/s/1miBQj8G 官网下载地址1：https://git-scm.com/downloads 官网下载地址2：https://git-for-windows.github.io/ TortoiseGit: TortoiseGit-1.8.16.0-64bit.msi 下载地址：https://pan.baidu.com/s/1kUKzzQv 官网下载地址：https://tortoisegit.org/download/ 2. 配置环境变量，方便从命名行直接访问相关命令 Git根目录 –&gt; 变量名：Git_Home 变量值： C:\Program Files (x86)\GitTortoiseGit根目录 –&gt; 变量名：TortoiseGit_Home 变量值：C:\Program Files\TortoiseGit 备注：如果之前在其他设备上配置过Git和TortoiseGit，这里可以直接拷贝之前的.ssh目录过来使用，就不用做下面的3-9步骤了。如果是第一次配置，或者想重新配置新的账号信息，那么按照下面的步骤依次进行即可。 3. 使用Git 命令行生成公钥和私钥1、进入到系统cmd（使用快捷键Win+R然后输入cmd即可进入）界面（备注：左Shift + 鼠标右键弹出菜单里面，有直接进入命令行的菜单，但是这里千万不要用这个方，因为这里进入的命令行和系统cmd进入的权限不一样，生成的秘钥是不一样的，踩过这个坑），我这里默认路径是C:\Users\Administrator，这个路径没有要求，任何目录都可以，生成钥的时候需要输入密码，这里默认写123456，后面clone代码的时候需要用到。 2、执行命令：ssh-keygen –t rsa –C xxxx@xxx.com 3、输入保存的文件名：id_rsa 4、输入密码：123456 即可成功创建公钥和私钥，这里会保存到C:\Users\Administrator 目录下123456789$ ssh-keygen -t rsa -C username@qq.comGenerating public/private rsa key pair.Enter file in which to save the key (//.ssh/id_rsa): id_rsaEnter passphrase (empty for no passphrase):Enter same passphrase again:Your identification has been saved in id_rsa.Your public key has been saved in id_rsa.pub.The key fingerprint is:08:0f:a3:dd:5f:33:7a:aa:67:ff:e2:c4:1a:5e:21:ac username@qq.com 4. 在当前用户目录创建.ssh目录，并把id_rsa文件放入其中当前用户目录一般是在C盘用户目录下面的Administrator目录或者其他的用户目录（如果为Windows系统创建过其他用户）。 这里我的是C:\Users\Administrator 目录，进入C:\Users\Administrator目录，如果没有 .ssh目录，在当前目录下进入cmd执行命令 mkdir .ssh 即可创建。备注：有些Git版本id_rsa可能不是放到用户目录的.ssh目录，而是放到Git的安装目录下的.ssh。自己在配置过程中如果发现配置不生效，尝试把.ssh目录放到另外一个目录下。 5. 把公钥上传到服务器用文本文件打开id_rsa.pub，复制里面的全部文本，登录代码仓库服务器，添加新的ssh-key，粘贴复制的内容到key里面，Title会自动生成，这里可以仿照在github上面添加ssh-key一样的步骤添加。 6. 使用命令行下拉代码 进入cmd，进入存放代码的文件夹目录执行git命令 1、执行“git init” 初始化git环境，然后调用 2、执行“git clone 服务器代码路径”，开始下拉代码 备注：如果clone代码不成功，则把id_rsa文件放到git安装目录下的.ssh目录下，默认安装的话是 C:\Program Files (x86)\Git.ssh 7. 配置用户名和邮箱 要提交代码的时候，服务器上面显示是谁提交的代码，这里需要自己配置，配置的时候有两种方式，一种是全局配置（所有地方都用同样的用户名和邮箱），一种是针对各个工作目录自己配置。 进入cmd，进入代码工作目录，进行如下配置。全局配置：双引号也是命令内容 git config –global user.name “name”git config –global user.email “email”局部配置（命令行需要进入对应的代码工作目录）：双引号也是命令内容git config user.name “name”git config user.email “email” 8. 使用TortoiseGit来下拉代码配置1—&gt;生成 .ppk文件如果按找第2步中配置了相关环境变量，那么可以直接在cmd中打开puttygen(也可以到TortoiseGit的安装路径下找到C:\Program Files\TortoiseGit\bin\puttygen.exe) 点击下图中规定load加载私钥id_rsa，然后点击Save private key生成TortoiseGit需要使用的ppk文件（id_rsa.ppk） 9. 使用TortoiseGit来下拉代码配置2—&gt;配置TortoiseGit客户端打开TortoiseGit设置页面，配置相关参数如下：配置用户名和邮箱，配置服务器代码路径和上面得到的id_rsa.ppk路径，进入TortoiseGit的Settings页面，点击左边导航栏的Git目录，设置用户名和邮箱（Name, Email）,Name会在提交代码的时候显示出来，如果之前使用git config配置过，这里也可以不用配置的。 然后点击Git下的Remote菜单，添加一个origin远程仓库分之信息：Remote是为远程分之起个名字，URL是远程仓库地址，Putty是id_rsa.ppk文件路径，**至此就可以使用TortoiseGit正常工作了，可以试试pull，commit等功能。**]]></content>
       <categories>
         <category>我是一枚程序员</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[网站升级为https过程记录-tomcat]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E7%BD%91%E7%AB%99%E5%8D%87%E7%BA%A7%E4%B8%BAhttps%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95-tomcat%2F</url>
-    <content type="text"><![CDATA[1.创建.keystore12345678910111213141516171819202122[root@centos apache-tomcat-6.0.37]# keytool -genkey -alias tomcat -keyalg RSA -keystore /root/tomcat/apache-tomcat-6.0.37/conf/.keystore输入keystore密码： 再次输入新密码: 您的名字与姓氏是什么？ [Unknown]： free4lab您的组织单位名称是什么？ [Unknown]： free4lab您的组织名称是什么？ [Unknown]： free4lab您所在的城市或区域名称是什么？ [Unknown]： beijing您所在的州或省份名称是什么？ [Unknown]： beijing该单位的两字母国家代码是什么 [Unknown]： CNCN=free4lab, OU=free4lab, O=free4lab, L=beijing, ST=beijing, C=CN 正确吗？ [否]： y输入&lt;tomcat&gt;的主密码 （如果和 keystore 密码相同，按回车）： [root@centos apache-tomcat-6.0.37]# cat conf/.keystore` 2.然后修改tomcat配置文件server.xml123&lt;Connector port=&quot;8800&quot; SSLEnabled=&quot;true&quot; maxThreads=&quot;150&quot; scheme=&quot;https&quot; secure=&quot;true&quot; protocol=&quot;org.apache.coyote.http11.Http11Protocol&quot; clientAuth=&quot;false&quot; keystoreFile=&quot;/opt/tomcat/conf/.keystore&quot; keystorePass=&quot;wewell&quot; sslProtocol=&quot;TLS&quot; /&gt; 然后重启tomcat访问即可： 遇到的坑 hppt和https不能同时访问提供一个解决思路 1.相对协议如果你的网站同时准备了 https 资源和 http 资源，那么，可以使用相对协议可以帮助你实现当网站引入的都是 http 资源，网站域名更换为 https 后的无缝切换。具体使用方法为：1//![](//domain.com/img/logo.png) 简而言之，就是将URL的协议（http、https）去掉，只保留//及后面的内容。这样，在使用https的网站中，浏览器会通过https请求URL，否则就通过http发送请求。附注：如果是浏览本地文件，浏览器通过file://协议发送请求，导致请求失败，因此本地测试最好是搭建一个本地服务器。HTML5 Boilerplate 使用相对协议请求 Google CDN 中的 jQuery ，使用方式为：1234&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js&quot;&gt;&lt;/script&gt; &lt;script&gt;!window.jQuery &amp;&amp; document.write(unescape(&apos;%3Cscript src=&quot;js/libs/jquery-1.4.2.js&quot;%3E%3C/script%3E&apos;))&lt;/script&gt; 上面的例子中除了引用 Google CDN 中的文件外，还添加了一个本地 jQuery 链接，以便连接 Google CDN 失败后，使用本地副本。 代码判断过程为：首先检查 jquery 对象是否存在，如果存在，证明 Google CDN 运行正常；如果不存在，则说明连接 Google CDN 失败，引入本地 jQuery 库。 本猿认为，在国内相对特殊的网络环境中，Google CDN 请求缓慢甚至失败常有，因此不推荐引用 Google CDN 托管的各种库。即便有备用链接，浏览器还是会多次尝试请求 Google CDN 中的文件，这个过程可谓漫长，严重影响页面载入速度。 2.使用 iframe 使用 iframe 的方式引入 http 资源，比如在 https 里面播放优酷的视频，我们可以先在一个 http 的页面里播放优酷视频，然后将这个页面嵌入到 https 页面里就可以了。另外一个典型的例子是在 https 页面里通过 Ajax 的方式请求 http 资源，Chrome 是不允许直接 Ajax 请求 http 的。如果两个页面的内容都可以控制的话，当前窗口可以 iframe 窗口进行通信。 3.其他用法 这个小技巧同样适用于 CSS ：1.omg &#123; background: url(//websbestgifs.net/kittyonadolphin.gif); &#125; 附注：或@import引入样式表时使用相对协议，IE7、IE8 会下载文件两次。 我的angularjs程序解决思路所有的异步请求都是一个配置文件中定义的，我在程序开始运行时进行了判断，访问协议是http的就http访问，https的就https访问。]]></content>
+    <title><![CDATA[Hexo+Coding-搭建静态博客]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2FHexo%2BCoding-%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[https://blog.paddings.cn/2016/04/30/blog/hexo-coding/ 早就想搭建一个自己的博客，是时候表演真正的技术了。]]></content>
       <categories>
         <category>我是一枚程序员</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[翻墙]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E7%BF%BB%E5%A2%99%2F</url>
-    <content type="text"><![CDATA[fanqiang翻过帝国防护墙 赛风 windows版 Android版 iOS版 Firefly 萤火虫 windows osx Ubuntu 64位-Ubuntu 32位 Android 4.0.3 及以上-iOS 9.3 及以上 Tor Browser 的Meek模式https://www.torproject.org/download/download-easy.html.en 蓝灯https://github.com/getlantern/lantern/releases/tag/latest 浏览器插件 谷歌访问助手http://www.ggfwzs.com/ 仅仅供外贸和写代码等使用，勿违法乱纪]]></content>
+    <title><![CDATA[Http上传原理]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2FHttp%E4%B8%8A%E4%BC%A0%E5%8E%9F%E7%90%86%2F</url>
+    <content type="text"><![CDATA[Http上传需要用到multipart/form-data请求方式，Http协议原始方法不支持multipart/form-data请求，那这个请求自然就是由原始的请求方法拼装而成，具体规则如下： 1、multipart/form-data的本质上还是Post请求2、multipart/form-data与post方法的不同之处：请求头，请求体。3、multipart/form-data的请求头必须包含一个特殊的头信息：Content-Type，且其值也必须规定为multipart/form-data，同时还需要规定一个内容分割符用于分割请求体中的多个post的内容，如文件内容和文本内容自然需要分割开来，不然接收方就无法正常解析和还原这个文件了。4、multipart/form-data的请求体也是一个字符串，不过和post的请求体不同的是它的构造方式，post是简单的name=value值连接，而multipart/form-data则是添加了分隔符等内容的构造体。抓包结果如下：Request URL:https://your_base_url/open/qiniu/imageRequest Method:POSTStatus Code:200 OK​Request HeadersAccept-Encoding:gzipConnection:Keep-AliveContent-Length:117276Content-Type:multipart/form-data; boundary=ed67c97e-2000-47de-9033-77aeb8df43d9Host:your_base_urltoken:794d5240-de2a-465b-9a5a-66f71f567acdUser-Agent:Dalvik/2.1.0 (Linux; U; Android 5.1.1; vivo X7 Build/LMY47V) app_name/1.5.0​Request Payload–ed67c97e-2000-47de-9033-77aeb8df43d9Content-Disposition: form-data; name=”file”; filename=”coin.jpg”Content-Type: image/jpgContent-Length: 117075–ed67c97e-2000-47de-9033-77aeb8df43d9– 可以看到Request Headers中包含了Accept-Encoding、Content-Length、Content-Type、Host、User-Agent等参数，OkHttp会自动生成boundary，无需手动编写规则；Request Payload中包含了具体的上传内容，Content-Disposition包含了上传文件名以及part参数key值，Content-Type指明了上传文件的后缀格式。 User-Agent一般都会重写，以其可以包含系统信息和用户自定义的信息，系统信息可以通过System.getProperty(“http.agent”)获得，然后再拼接上app独有的信息即可]]></content>
       <categories>
         <category>我是一枚程序员</category>
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[解决网络劫持]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E8%A7%A3%E5%86%B3%E7%BD%91%E7%BB%9C%E5%8A%AB%E6%8C%81%2F</url>
-    <content type="text"><![CDATA[angularjs做的网站，用户反映路由跳转时总是回到首页。尼玛这个问题真恶心啊，远程调试半天，发现是他的网络被劫持了。然后自动给我把html也没换成了如下一个页面第一行代码就是跳转首页。cnm123&lt;script language=&quot;javascript&quot;&gt;setTimeout(&quot;location.replace(location.href.split(\&quot;#\&quot;)[0])&quot;,2000);&lt;/script&gt; 网上搜索都是一句话： 翻译过来就是：angularjs升级到1.6.3，cookie也升级到1.6.3， ui-router升级到0.4.2 。网上有人说原因是这个： 问题是怎么只劫持ui-view加载的模板，ng-include进来的模板就没有劫持。【对比ng-include的请求和ui-view的请求，发现Accept是不同的】ng-include的是：Accept:application/json, text/plain, /而ui-view 的是 Accept:text/html应该是这样的，劫持，基本劫持的是html页面，如果accept 为application/json，他的理解就是json而不是html， 而 accept为text/html时，自然就被劫持了。但只是知道了这个，仍然不知道怎么去改，因为这请求时ui-view里面封装的，不大好改。 然后终极办法是升级网站为https。好吧，那我就升级吧。 升级方法如下linux tomcat配置https12345678910111213141516171819202122[root@centos apache-tomcat-6.0.37]# keytool -genkey -alias tomcat -keyalg RSA -keystore /root/tomcat/apache-tomcat-6.0.37/conf/.keystore输入keystore密码： 再次输入新密码: 您的名字与姓氏是什么？ [Unknown]： free4lab您的组织单位名称是什么？ [Unknown]： free4lab您的组织名称是什么？ [Unknown]： free4lab您所在的城市或区域名称是什么？ [Unknown]： beijing您所在的州或省份名称是什么？ [Unknown]： beijing该单位的两字母国家代码是什么 [Unknown]： CNCN=free4lab, OU=free4lab, O=free4lab, L=beijing, ST=beijing, C=CN 正确吗？ [否]： y输入&lt;tomcat&gt;的主密码 （如果和 keystore 密码相同，按回车）： [root@centos apache-tomcat-6.0.37]# cat conf/.keystore 12345然后修改tomcat配置文件server.xml&lt;Connector port=&quot;8443&quot; protocol=&quot;HTTP/1.1&quot; SSLEnabled=&quot;true&quot; maxThreads=&quot;150&quot; scheme=&quot;https&quot; secure=&quot;true&quot; clientAuth=&quot;false&quot; keystoreFile=&quot;/root/tomcat/apache-tomcat-6.0.37/conf/.keystore&quot; keystorePass=&quot;yourpassword&quot; sslProtocol=&quot;TLS&quot; /&gt; 访问效果如下：通过curl访问，就忽略验证证书这一步12[root@f0 huahui]# curl --insecure https://192.168.1.190:8443/hello huahuiyangssl https` 这样浏览器访问就相对安全了，浏览器和服务端进行了非对称加密的握手，然后协商对称加密的密钥，然后进行相对快速的对称加密传输。即时密文在网络传输中被截获，因为无法获知对称密钥，所以这个http api就是安全的！]]></content>
+    <title><![CDATA[git使用笔记整理]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2Fgit%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%2F</url>
+    <content type="text"><![CDATA[参考文章http://www.cnblogs.com/popfisher/p/5466174.html安装git安装git tortoise设置用户名和密码 $ git config –global user.name “xxx”$ git config –global user.email “xxx@xx.com” 生成key ssh-keygen -t rsa -C “email@email.com” 配置Git Tortoise 私钥 如果按找第2步中配置了相关环境变量，那么可以直接在cmd中打开puttygen(也可以到TortoiseGit的安装路径下找到C:\Program Files\TortoiseGit\bin\puttygen.exe)点击下图中规定load加载私钥id_rsa，然后点击Save private key生成TortoiseGit需要使用的ppk文件（id_rsa.ppk） 9. 使用TortoiseGit来下拉代码配置2—&gt;**配置TortoiseGit客户端 打开TortoiseGit设置页面，配置相关参数如下：配置用户名和邮箱，配置服务器代码路径和上面得到的id_rsa.ppk路径，进入TortoiseGit的Settings页面，点击左边导航栏的Git目录，设置用户名和邮箱（Name, Email）,Name会在提交代码的时候显示出来，如果之前使用git config配置过，这里也可以不用配置的。然后点击Git下的Remote菜单，添加一个origin远程仓库分之信息：Remote是为远程分之起个名字，URL是远程仓库地址，Putty是id_rsa.ppk文件路径 至此就可以使用TortoiseGit正常工作了，可以试试pull，commit等功能**]]></content>
+      <categories>
+        <category>我是一枚程序员</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[git免费建站]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2Fgit%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%AB%99%2F</url>
+    <content type="text"><![CDATA[记录Hexo+Github免费搭建个人博客Jekyll 到 GitHub Pages 安装hexo 12345npm uninstall -g hexo-clirm /usr/local/bin/hexorm -rf node_modulesnpm installnpm install -g hexo-cli 安装成功大概是这样的 安装失败把C:\Users\admin\AppData\Roaming\npm\node_modules 下hexo-cli文件夹删除]]></content>
+      <categories>
+        <category>我是一枚程序员</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[https-页面中引入-http-资源的解决方式]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2Fhttps-%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%BC%95%E5%85%A5-http-%E8%B5%84%E6%BA%90%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[https://segmentfault.com/a/1190000004200361 而且如果在一个 https 页面里动态的引入 http 资源，比如引入一个 js 文件，会被直接 block 掉的。Chrome v21 之后，在 SSL 加密页面 embed 非 SSL 的 Flash 资源也会被默默的屏蔽掉，只留下一句 console 报告。解决方式 相对协议如果你的网站同时准备了 https 资源和 http 资源，那么，可以使用相对协议可以帮助你实现当网站引入的都是 http 资源，网站域名更换为 https 后的无缝切换。具体使用方法为：1&lt;img src=&quot;//domain.com/img/logo.png&quot;&gt; 简而言之，就是将URL的协议（http、https）去掉，只保留//及后面的内容。这样，在使用https的网站中，浏览器会通过https请求URL，否则就通过http发送请求。附注：如果是浏览本地文件，浏览器通过file://协议发送请求，导致请求失败，因此本地测试最好是搭建一个本地服务器。 HTML5 Boilerplate 使用相对协议请求 Google CDN 中的 jQuery ，使用方式为：12&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js&quot;&gt;&lt;/script&gt; &lt;script&gt;!window.jQuery &amp;&amp; document.write(unescape(&apos;%3Cscript src=&quot;js/libs/jquery-1.4.2.js&quot;%3E%3C/script%3E&apos;))&lt;/script&gt; 上面的例子中除了引用 Google CDN 中的文件外，还添加了一个本地 jQuery 链接，以便连接 Google CDN 失败后，使用本地副本。代码判断过程为：首先检查 jquery 对象是否存在，如果存在，证明 Google CDN 运行正常； 如果不存在，则说明连接 Google CDN 失败，引入本地 jQuery 库。 本猿认为，在国内相对特殊的网络环境中，Google CDN 请求缓慢甚至失败常有，因此不推荐引用 Google CDN 托管的各种库。即便有备用链接，浏览器还是会多次尝试请求 Google CDN 中的文件，这个过程可谓漫长，严重影响页面载入速度。 使用 iframe使用 iframe 的方式引入 http 资源，比如在 https 里面播放优酷的视频，我们可以先在一个 http 的页面里播放优酷视频，然后将这个页面嵌入到 https 页面里就可以了。另外一个典型的例子是在 https 页面里通过 Ajax 的方式请求 http 资源，Chrome 是不允许直接 Ajax 请求 http 的。如果两个页面的内容都可以控制的话，当前窗口可以 iframe 窗口进行通信。其他用法这个小技巧同样适用于 CSS ：.omg { background: url(//websbestgifs.net/kittyonadolphin.gif); } 附注：或@import引入样式表时使用相对协议，IE7、IE8 会下载文件两次。]]></content>
+      <categories>
+        <category>我是一枚程序员</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[函数式编程初探]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%88%9D%E6%8E%A2%2F</url>
+    <content type="text"><![CDATA[http://www.ruanyifeng.com/blog/2012/04/functional_programming.html]]></content>
       <categories>
         <category>我是一枚程序员</category>
       </categories>
@@ -121,9 +137,41 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[git免费建站]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2Fgit%E5%85%8D%E8%B4%B9%E5%BB%BA%E7%AB%99%2F</url>
-    <content type="text"><![CDATA[记录Hexo+Github免费搭建个人博客Jekyll 到 GitHub Pages 安装hexo 12345npm uninstall -g hexo-clirm /usr/local/bin/hexorm -rf node_modulesnpm installnpm install -g hexo-cli 安装成功大概是这样的 安装失败把C:\Users\admin\AppData\Roaming\npm\node_modules 下hexo-cli文件夹删除]]></content>
+    <title><![CDATA[在windows中安装ubuntu]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E5%9C%A8windows%E4%B8%AD%E5%AE%89%E8%A3%85ubuntu%2F</url>
+    <content type="text"><![CDATA[http://blog.csdn.net/freeboy1015/article/details/9319673]]></content>
+      <categories>
+        <category>我是一枚程序员</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[BootStrap可视化布局系统，自动生成代码]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2FBootStrap%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B8%83%E5%B1%80%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[http://www.bootcss.com/p/layoutit/]]></content>
+      <categories>
+        <category>我是一枚程序员</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[翻墙]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E7%BF%BB%E5%A2%99%2F</url>
+    <content type="text"><![CDATA[fanqiang翻过帝国防护墙 赛风 windows版 Android版 iOS版 Firefly 萤火虫 windows osx Ubuntu 64位-Ubuntu 32位 Android 4.0.3 及以上-iOS 9.3 及以上 Tor Browser 的Meek模式https://www.torproject.org/download/download-easy.html.en 蓝灯https://github.com/getlantern/lantern/releases/tag/latest 浏览器插件 谷歌访问助手http://www.ggfwzs.com/ 仅仅供外贸和写代码等使用，勿违法乱纪]]></content>
+      <categories>
+        <category>我是一枚程序员</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[网站升级为https过程记录-tomcat]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E7%BD%91%E7%AB%99%E5%8D%87%E7%BA%A7%E4%B8%BAhttps%E8%BF%87%E7%A8%8B%E8%AE%B0%E5%BD%95-tomcat%2F</url>
+    <content type="text"><![CDATA[1.创建.keystore12345678910111213141516171819202122[root@centos apache-tomcat-6.0.37]# keytool -genkey -alias tomcat -keyalg RSA -keystore /root/tomcat/apache-tomcat-6.0.37/conf/.keystore输入keystore密码： 再次输入新密码: 您的名字与姓氏是什么？ [Unknown]： free4lab您的组织单位名称是什么？ [Unknown]： free4lab您的组织名称是什么？ [Unknown]： free4lab您所在的城市或区域名称是什么？ [Unknown]： beijing您所在的州或省份名称是什么？ [Unknown]： beijing该单位的两字母国家代码是什么 [Unknown]： CNCN=free4lab, OU=free4lab, O=free4lab, L=beijing, ST=beijing, C=CN 正确吗？ [否]： y输入&lt;tomcat&gt;的主密码 （如果和 keystore 密码相同，按回车）： [root@centos apache-tomcat-6.0.37]# cat conf/.keystore` 2.然后修改tomcat配置文件server.xml123&lt;Connector port=&quot;8800&quot; SSLEnabled=&quot;true&quot; maxThreads=&quot;150&quot; scheme=&quot;https&quot; secure=&quot;true&quot; protocol=&quot;org.apache.coyote.http11.Http11Protocol&quot; clientAuth=&quot;false&quot; keystoreFile=&quot;/opt/tomcat/conf/.keystore&quot; keystorePass=&quot;wewell&quot; sslProtocol=&quot;TLS&quot; /&gt; 然后重启tomcat访问即可： 遇到的坑 hppt和https不能同时访问提供一个解决思路 1.相对协议如果你的网站同时准备了 https 资源和 http 资源，那么，可以使用相对协议可以帮助你实现当网站引入的都是 http 资源，网站域名更换为 https 后的无缝切换。具体使用方法为：1//![](//domain.com/img/logo.png) 简而言之，就是将URL的协议（http、https）去掉，只保留//及后面的内容。这样，在使用https的网站中，浏览器会通过https请求URL，否则就通过http发送请求。附注：如果是浏览本地文件，浏览器通过file://协议发送请求，导致请求失败，因此本地测试最好是搭建一个本地服务器。HTML5 Boilerplate 使用相对协议请求 Google CDN 中的 jQuery ，使用方式为：1234&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js&quot;&gt;&lt;/script&gt; &lt;script&gt;!window.jQuery &amp;&amp; document.write(unescape(&apos;%3Cscript src=&quot;js/libs/jquery-1.4.2.js&quot;%3E%3C/script%3E&apos;))&lt;/script&gt; 上面的例子中除了引用 Google CDN 中的文件外，还添加了一个本地 jQuery 链接，以便连接 Google CDN 失败后，使用本地副本。 代码判断过程为：首先检查 jquery 对象是否存在，如果存在，证明 Google CDN 运行正常；如果不存在，则说明连接 Google CDN 失败，引入本地 jQuery 库。 本猿认为，在国内相对特殊的网络环境中，Google CDN 请求缓慢甚至失败常有，因此不推荐引用 Google CDN 托管的各种库。即便有备用链接，浏览器还是会多次尝试请求 Google CDN 中的文件，这个过程可谓漫长，严重影响页面载入速度。 2.使用 iframe 使用 iframe 的方式引入 http 资源，比如在 https 里面播放优酷的视频，我们可以先在一个 http 的页面里播放优酷视频，然后将这个页面嵌入到 https 页面里就可以了。另外一个典型的例子是在 https 页面里通过 Ajax 的方式请求 http 资源，Chrome 是不允许直接 Ajax 请求 http 的。如果两个页面的内容都可以控制的话，当前窗口可以 iframe 窗口进行通信。 3.其他用法 这个小技巧同样适用于 CSS ：1.omg &#123; background: url(//websbestgifs.net/kittyonadolphin.gif); &#125; 附注：或@import引入样式表时使用相对协议，IE7、IE8 会下载文件两次。 我的angularjs程序解决思路所有的异步请求都是一个配置文件中定义的，我在程序开始运行时进行了判断，访问协议是http的就http访问，https的就https访问。]]></content>
+      <categories>
+        <category>我是一枚程序员</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[超链接-a-中的文字自动换行]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E8%B6%85%E9%93%BE%E6%8E%A5-a-%E4%B8%AD%E7%9A%84%E6%96%87%E5%AD%97%E8%87%AA%E5%8A%A8%E6%8D%A2%E8%A1%8C%2F</url>
+    <content type="text"><![CDATA[css3：word-wrap:break-word 语法word-wrap: normal|break-word;值 描述normal 只在允许的断字点换行（浏览器保持默认处理）。break-word 在长单词或 URL 地址内部进行换行。]]></content>
       <categories>
         <category>我是一枚程序员</category>
       </categories>
@@ -145,33 +193,25 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[BootStrap可视化布局系统，自动生成代码]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2FBootStrap%E5%8F%AF%E8%A7%86%E5%8C%96%E5%B8%83%E5%B1%80%E7%B3%BB%E7%BB%9F%EF%BC%8C%E8%87%AA%E5%8A%A8%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81%2F</url>
-    <content type="text"><![CDATA[http://www.bootcss.com/p/layoutit/]]></content>
-      <categories>
-        <category>我是一枚程序员</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[在windows中安装ubuntu]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E5%9C%A8windows%E4%B8%AD%E5%AE%89%E8%A3%85ubuntu%2F</url>
-    <content type="text"><![CDATA[http://blog.csdn.net/freeboy1015/article/details/9319673]]></content>
-      <categories>
-        <category>我是一枚程序员</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[函数式编程初探]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%88%9D%E6%8E%A2%2F</url>
-    <content type="text"><![CDATA[http://www.ruanyifeng.com/blog/2012/04/functional_programming.html]]></content>
-      <categories>
-        <category>我是一枚程序员</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[“好朋友越来越少，好朋友越来越好”]]></title>
     <url>%2F2017%2F11%2F15%2F%E6%9C%89%E6%AF%92%E7%9A%84%E6%96%87%E5%AD%97%2F%E2%80%9C%E5%A5%BD%E6%9C%8B%E5%8F%8B%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%B0%91%EF%BC%8C%E5%A5%BD%E6%9C%8B%E5%8F%8B%E8%B6%8A%E6%9D%A5%E8%B6%8A%E5%A5%BD%E2%80%9D%2F</url>
     <content type="text"><![CDATA[“失去过许多朋友，因为我不善言谈，于是他们渐渐有了新朋友，把我遗忘。或者认为我孤僻高傲，我不会整天对朋友说我爱你这类好听的话来表达自己。真正的友情是平平淡淡以诚相待，不需要太过热情和亲昵。在我失落沮丧自负的时候多谢你从来没放弃过我。我给不了你太多，但有个词叫尽我所能。”01、深夜里倾盆大雨，你很想把雨声录音给谁听，但翻遍整个通讯录，都没有看到那个合适的人。想去看刚上映的电影，寻遍四周，也没有找到那个可以陪你的人。每个月的免费通话时长总也用不完，未读信息都是来自10086。开着qq，更多的只是习惯，而不是为了和谁聊天。即使微信里躺着200多个好友，你发一条朋友圈也不会超过10个赞。你不得不去面对身边的朋友越来越少的事实，但你却一点也不觉得难过和孤独。因为到了某个阶段，朋友少这件事，其实是你自己选择的。02、你接连数月每天都碰到一个人，于是你同他的关系便十分亲密起来，你当时甚至会想没有了这个人还不知怎么生活呢。随后两人分离了，但一切仍按先前的格局进行着。你原先认为一刻也离不开的伙伴，此时却变得可有可无，日复一日，久而久之，你甚至连想都不想他了。想了想这段话不无道理，就像张爱玲与炎樱的友情，两人相识于香港大学，念书时很是要好，胡兰成与张爱玲结婚的时候，炎樱还是证婚人。但后来两人分隔两地，感情疏离，老死不相往来。炎樱曾在信里问，为什么莫名其妙不再理我？张爱玲说：我不喜欢一个人和我老是聊几十年前的事，好像我是个死人一样。在十几岁的时候，和一个人做朋友的初衷很简单，无非就是因为我们一起上课吃饭去逛街，可以和彼此分享各自的小秘密，不管是风吹日晒也要在一起胡闹，每天形影不离，深夜互诉衷肠。但一旦分开以后，时间和空间距离的扩大，交集会变得越来越少，即使见面能谈起来的也都是过去，因为我们之间，根本没有未来。人到了某个阶段后，对自己想要的东西会越来越清晰，朋友也是一样。我天生不善交际，也不懂该如何维持一段关系。“你对我而言很重要”这句话无论如何都说不出口。“道不同不相为谋”，所以我们只能走到这儿了。 03、陈奕迅在《最佳损友》里这么唱:“一起走到了某个路口，是敌与是友。各自也没有自由，位置变了各有队友。问我有没有，确实也没有。一直躲避的藉口，非什么大仇。为何旧知己，在最后变不到老友。”你也好奇为什么当初那么要好的两个人，最后的结局依然是分道扬镳。但这两年随着年龄的增长，你也慢慢明白，之所以有些人没有留下，是因为我们于对方而言，还不够重要。能离开的，都是不属于自己的。或许真正的朋友之间，从来都不需要时时刻刻的黏在一起，也不是非得在一起做过多么轰烈的事之后才会无话不谈。而是你得意时，她发自内心的为你开心。你摔跤了，她第一个跑过来扶你起来。你发自内心的欣赏她，她对你也是真情实意从不假装。你们支持彼此的决定，哪怕那是错的，也要陪着对方去完成。恋人也许会被取代，玩伴也会随时更换，但你知道，还有一个人谁也无法替代。04、夜里怕打扰她睡觉，所以你不会轻易给她发消息，但在第二天一定会把录好的雨水拍打在地上的声音给她听。她知道你找不到人一起看电影，就在她的城市和你买了同一场次相同座位的电影票，在别人和同伴窃窃私语讨论剧情的时候，你们也在互发消息开始吐槽。她或许喜欢玩qq，所以你每天在线，她需要你的时候，随时都能找到。你或许喜欢微信，她很少给你点赞，但你知道，关于你的一切她都知晓。你不喜多言，她或许叽叽喳喳。但你们永远不担心冷场和失去，见面也不只是寒暄和尴尬。美国往事里面说，“当我对所有的事情都厌倦的时候，我就会想到你。想到你在世界的某个地方生活着，存在着，我就愿意忍受一切。你的存在对我很重要。”真正的朋友是在最黑暗的时候，陪你一起等天亮的人真正的感情是心在下雨的时候，甘愿为你撑伞的人这个世上，能为你留到最后的人是最少的，但却是最好的。人只有在最深的绝望里，往往看到的才是最美的风景。好朋友越来越少了，但好朋友也越来越好了。 END - 朋友很多，知交者少好友很多，知情者少情绪很多，分享者少缘分不多，知心就好情不论长，真心就好「 晚安」本文转自互联网]]></content>
+      <categories>
+        <category>有毒的文字</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[不管怎样，你要善良]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%9C%89%E6%AF%92%E7%9A%84%E6%96%87%E5%AD%97%2F%E4%B8%8D%E7%AE%A1%E6%80%8E%E6%A0%B7%EF%BC%8C%E4%BD%A0%E8%A6%81%E5%96%84%E8%89%AF%2F</url>
+    <content type="text"><![CDATA[人们经常是不讲道理的、没有逻辑的和以自我为中心的 不管怎样，你要原谅他们 即使你是友善的，人们可能还是会说你自私和动机不良 不管怎样，你还是要友善 当你功成名就，你会有一些虚假的朋友 和一些真实的敌人 不管怎样，你还是要取得成功 即使你是诚实的和率直的，人们可能还是会欺骗你 不管怎样，你还是要诚实和率直 你多年来营造的东西 有人在一夜之间把它摧毁 不管怎样，你还是要去营造 如果你找到了平静和幸福，他们可能会嫉妒你 不管怎样，你还是要快乐 你今天做的善事，人们往往明天就会忘记 不管怎样，你还是要做善事 即使把你最好的东西给了这个世界 也许这些东西永远都不够 不管怎样，把你最好的东西给这个世界 你看，说到底，它是你和上帝之间的事 而决不是你和他人之间的事]]></content>
+      <categories>
+        <category>有毒的文字</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[他喜不喜欢你，看聊天记录就知道]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%9C%89%E6%AF%92%E7%9A%84%E6%96%87%E5%AD%97%2F%E4%BB%96%E5%96%9C%E4%B8%8D%E5%96%9C%E6%AC%A2%E4%BD%A0%EF%BC%8C%E7%9C%8B%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95%E5%B0%B1%E7%9F%A5%E9%81%93%2F</url>
+    <content type="text"><![CDATA[人的倾诉欲是有限的，我们往往只想和喜欢的人说更多的话。而在越来越繁重的生活里，每个人都变得很忙，交流也变得更为珍贵。 没有人是不忙的。 但为什么总有人，他整天像个没事儿的人一样，找你说不停的话。一遍一遍问你在干什么，吃饭了吗。还会把一点点小事都和你唠叨。 喜欢和你说话的人，我想他是喜欢你的。 02 那天喝下午茶，我看到朋友对着手机认认真真在聊天。我打趣地问她，“是哪位追求者啊”。她把手机递过来，示意我自己看。朋友上下划了两页，我就明白了。 不是她的追求者，而是她在追求别人。 或者明白一点说，她喜欢对方，而对方，回应很勉强。 我问她，“这是你喜欢的男孩吧”。 她点点头，问我怎么看出来的。 很简单啊。 两页聊天记录里，总是朋友说得比较多。对方的回应最多是，“恩”，“好的”，偶尔在玩笑处回应“哈哈”。 看着都挺尴尬吧。 朋友发了一大串话，对方回复了一个“恩”，朋友还能继续说。这还不是喜欢？ 03 我想了想，聊天记录真的能看出两方谁用了比较多的感情。 和喜欢的人聊天，一页一页翻下来，总是我说得多，他说得少。和喜欢自己的人聊天，总是对方说得比较多，而自己的回应很少。 大概只有在和喜欢的人聊天时，人才会变得滔滔不绝。而面对不大有感觉的人，通常惜字如金。 对喜欢的人，迫不及待想要开始一段对话。于是忍不住就要主动找他。也在最后，舍不得自己先结束对话。 开头是你，结尾也是你。 对不太有感觉的人。不想开头，只想快点结束。于是一句“我去洗澡了”，就差不多结束了对话。 这是为什么，一个人能洗澡洗一晚上的原因。只是他不想再和你继续聊下去了。所以没有“我洗好了”。 喜欢你，才会找你聊天。不喜欢你，就会满屏只有你自己说的话。 他喜不喜欢你，看看聊天记录吧。 晚安。 本文来自互联网]]></content>
       <categories>
         <category>有毒的文字</category>
       </categories>
@@ -182,14 +222,6 @@
     <content type="text"><![CDATA[有人说，爱你不一定会主动找你啊。总有些人是宁愿失去也不主动的类型。相信我，那只是一小部分人，他们瞻前顾后，担心太多。换句话说，或许是他还不够爱你。我想更多的人，在喜欢的人面前，还是忍不住不打扰。要忍住那种很喜欢的感觉，不光难受，也很困难。小安昨天谈恋爱了，男友Z先生曾和她有长达半年的暧昧期。之所以在昨天突然就确定下来，还要感谢一个不知名的男孩。那个男孩是小安朋友的朋友，几次吃饭几次聚会就熟络了起来。但小安说，她还是不记得男孩叫什么。Z和小安是一个朋友圈子里的，他们认识好几年了，半年前才开始暧昧起来。那个不知道叫什么名字的男孩应该是对小安有好感，聚会时就一直照顾着小安。吃饭也好，唱歌也好，挡个酒递个水果什么的，贴心至极。小安心想，z半年来总是没表明过态度，自己想谈个恋爱，觉得这个男孩也不错，也可以试着接触一下。毕竟爱情这事，还是得两情相悦。就接受着男孩对她的好。在外人看来，他们的行为也有些暧昧的意思了。身边越来越多人开玩笑，说小安和男孩是一对儿。这话当然也传到了z先生耳朵里。那段时间小安和z先生接触不多，只知道他开始隔三差五找人喝酒了。一直到昨天。昨天凌晨3点，小安正和我们开群语音，突然就掉了线。5分钟之后她回来宣布，她和z先生在一起了。我们逮着她问事情的来龙去脉，才知道了结果。原来z先生之前和她暧昧就是因为他喜欢小安，但是又不确定有多喜欢。按他的话来说，就是没有喜欢到一定要和小安在一起的程度。直到那个男孩出现，那种要失去小安的感觉让他知道，他其实远比自己想的喜欢她。他和小安说，“我受不了你和别人在一起，所以我一定要和你在一起”。你看。他喜欢你，他爱你，就一定会来找你的。你也不用再对着电脑那边没有音信的对话框发呆。也不必再熬夜等他几年一次的晚安。你不用安慰自己说他的冷淡是天性，也不要再为他迟迟不表态而找借口。他不再对你说，“你在干嘛”了，因为他开始对别人说了。他不和你说晚安了，不是因为他忘了，而是因为他已经和别人说过了。他一直也和你暧昧着，总是不表态，不是因为他害羞而不敢表达。是因为，他真的不够喜欢你。比你想的还少。也或者，他只是喜欢暧昧，你也只是几分之一。他爱你，一定会来找你。他不爱你，你等也等不来爱情。 晚安，想梦见你。]]></content>
       <categories>
         <category>有毒的文字</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[https-页面中引入-http-资源的解决方式]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2Fhttps-%E9%A1%B5%E9%9D%A2%E4%B8%AD%E5%BC%95%E5%85%A5-http-%E8%B5%84%E6%BA%90%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E5%BC%8F%2F</url>
-    <content type="text"><![CDATA[https://segmentfault.com/a/1190000004200361 而且如果在一个 https 页面里动态的引入 http 资源，比如引入一个 js 文件，会被直接 block 掉的。Chrome v21 之后，在 SSL 加密页面 embed 非 SSL 的 Flash 资源也会被默默的屏蔽掉，只留下一句 console 报告。解决方式 相对协议如果你的网站同时准备了 https 资源和 http 资源，那么，可以使用相对协议可以帮助你实现当网站引入的都是 http 资源，网站域名更换为 https 后的无缝切换。具体使用方法为：1&lt;img src=&quot;//domain.com/img/logo.png&quot;&gt; 简而言之，就是将URL的协议（http、https）去掉，只保留//及后面的内容。这样，在使用https的网站中，浏览器会通过https请求URL，否则就通过http发送请求。附注：如果是浏览本地文件，浏览器通过file://协议发送请求，导致请求失败，因此本地测试最好是搭建一个本地服务器。 HTML5 Boilerplate 使用相对协议请求 Google CDN 中的 jQuery ，使用方式为：12&lt;script src=&quot;//ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js&quot;&gt;&lt;/script&gt; &lt;script&gt;!window.jQuery &amp;&amp; document.write(unescape(&apos;%3Cscript src=&quot;js/libs/jquery-1.4.2.js&quot;%3E%3C/script%3E&apos;))&lt;/script&gt; 上面的例子中除了引用 Google CDN 中的文件外，还添加了一个本地 jQuery 链接，以便连接 Google CDN 失败后，使用本地副本。代码判断过程为：首先检查 jquery 对象是否存在，如果存在，证明 Google CDN 运行正常； 如果不存在，则说明连接 Google CDN 失败，引入本地 jQuery 库。 本猿认为，在国内相对特殊的网络环境中，Google CDN 请求缓慢甚至失败常有，因此不推荐引用 Google CDN 托管的各种库。即便有备用链接，浏览器还是会多次尝试请求 Google CDN 中的文件，这个过程可谓漫长，严重影响页面载入速度。 使用 iframe使用 iframe 的方式引入 http 资源，比如在 https 里面播放优酷的视频，我们可以先在一个 http 的页面里播放优酷视频，然后将这个页面嵌入到 https 页面里就可以了。另外一个典型的例子是在 https 页面里通过 Ajax 的方式请求 http 资源，Chrome 是不允许直接 Ajax 请求 http 的。如果两个页面的内容都可以控制的话，当前窗口可以 iframe 窗口进行通信。其他用法这个小技巧同样适用于 CSS ：.omg { background: url(//websbestgifs.net/kittyonadolphin.gif); } 附注：或@import引入样式表时使用相对协议，IE7、IE8 会下载文件两次。]]></content>
-      <categories>
-        <category>我是一枚程序员</category>
       </categories>
   </entry>
   <entry>
@@ -233,9 +265,9 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[他喜不喜欢你，看聊天记录就知道]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%9C%89%E6%AF%92%E7%9A%84%E6%96%87%E5%AD%97%2F%E4%BB%96%E5%96%9C%E4%B8%8D%E5%96%9C%E6%AC%A2%E4%BD%A0%EF%BC%8C%E7%9C%8B%E8%81%8A%E5%A4%A9%E8%AE%B0%E5%BD%95%E5%B0%B1%E7%9F%A5%E9%81%93%2F</url>
-    <content type="text"><![CDATA[人的倾诉欲是有限的，我们往往只想和喜欢的人说更多的话。而在越来越繁重的生活里，每个人都变得很忙，交流也变得更为珍贵。 没有人是不忙的。 但为什么总有人，他整天像个没事儿的人一样，找你说不停的话。一遍一遍问你在干什么，吃饭了吗。还会把一点点小事都和你唠叨。 喜欢和你说话的人，我想他是喜欢你的。 02 那天喝下午茶，我看到朋友对着手机认认真真在聊天。我打趣地问她，“是哪位追求者啊”。她把手机递过来，示意我自己看。朋友上下划了两页，我就明白了。 不是她的追求者，而是她在追求别人。 或者明白一点说，她喜欢对方，而对方，回应很勉强。 我问她，“这是你喜欢的男孩吧”。 她点点头，问我怎么看出来的。 很简单啊。 两页聊天记录里，总是朋友说得比较多。对方的回应最多是，“恩”，“好的”，偶尔在玩笑处回应“哈哈”。 看着都挺尴尬吧。 朋友发了一大串话，对方回复了一个“恩”，朋友还能继续说。这还不是喜欢？ 03 我想了想，聊天记录真的能看出两方谁用了比较多的感情。 和喜欢的人聊天，一页一页翻下来，总是我说得多，他说得少。和喜欢自己的人聊天，总是对方说得比较多，而自己的回应很少。 大概只有在和喜欢的人聊天时，人才会变得滔滔不绝。而面对不大有感觉的人，通常惜字如金。 对喜欢的人，迫不及待想要开始一段对话。于是忍不住就要主动找他。也在最后，舍不得自己先结束对话。 开头是你，结尾也是你。 对不太有感觉的人。不想开头，只想快点结束。于是一句“我去洗澡了”，就差不多结束了对话。 这是为什么，一个人能洗澡洗一晚上的原因。只是他不想再和你继续聊下去了。所以没有“我洗好了”。 喜欢你，才会找你聊天。不喜欢你，就会满屏只有你自己说的话。 他喜不喜欢你，看看聊天记录吧。 晚安。 本文来自互联网]]></content>
+    <title><![CDATA[是不是一个人太久了，总觉得时间在翻倍的过。我不知道自己在找什么，只觉得丢了很多…………]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%9C%89%E6%AF%92%E7%9A%84%E6%96%87%E5%AD%97%2F%E6%98%AF%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%A4%AA%E4%B9%85%E4%BA%86%EF%BC%8C%E6%80%BB%E8%A7%89%E5%BE%97%E6%97%B6%E9%97%B4%E5%9C%A8%E7%BF%BB%E5%80%8D%E7%9A%84%E8%BF%87%E3%80%82%E6%88%91%E4%B8%8D%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E5%9C%A8%E6%89%BE%E4%BB%80%E4%B9%88%EF%BC%8C%E5%8F%AA%E8%A7%89%E5%BE%97%E4%B8%A2%E4%BA%86%E5%BE%88%E5%A4%9A%E2%80%A6%E2%80%A6%E2%80%A6%E2%80%A6%2F</url>
+    <content type="text"><![CDATA[是不是一个人太久了，总觉得时间在翻倍的过。我不知道自己在找什么，只觉得丢了很多…………]]></content>
       <categories>
         <category>有毒的文字</category>
       </categories>
@@ -249,22 +281,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[git使用笔记整理]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2Fgit%E4%BD%BF%E7%94%A8%E7%AC%94%E8%AE%B0%E6%95%B4%E7%90%86%2F</url>
-    <content type="text"><![CDATA[参考文章http://www.cnblogs.com/popfisher/p/5466174.html安装git安装git tortoise设置用户名和密码 $ git config –global user.name “xxx”$ git config –global user.email “xxx@xx.com” 生成key ssh-keygen -t rsa -C “email@email.com” 配置Git Tortoise 私钥 如果按找第2步中配置了相关环境变量，那么可以直接在cmd中打开puttygen(也可以到TortoiseGit的安装路径下找到C:\Program Files\TortoiseGit\bin\puttygen.exe)点击下图中规定load加载私钥id_rsa，然后点击Save private key生成TortoiseGit需要使用的ppk文件（id_rsa.ppk） 9. 使用TortoiseGit来下拉代码配置2—&gt;**配置TortoiseGit客户端 打开TortoiseGit设置页面，配置相关参数如下：配置用户名和邮箱，配置服务器代码路径和上面得到的id_rsa.ppk路径，进入TortoiseGit的Settings页面，点击左边导航栏的Git目录，设置用户名和邮箱（Name, Email）,Name会在提交代码的时候显示出来，如果之前使用git config配置过，这里也可以不用配置的。然后点击Git下的Remote菜单，添加一个origin远程仓库分之信息：Remote是为远程分之起个名字，URL是远程仓库地址，Putty是id_rsa.ppk文件路径 至此就可以使用TortoiseGit正常工作了，可以试试pull，commit等功能**]]></content>
-      <categories>
-        <category>我是一枚程序员</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[是不是一个人太久了，总觉得时间在翻倍的过。我不知道自己在找什么，只觉得丢了很多…………]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%9C%89%E6%AF%92%E7%9A%84%E6%96%87%E5%AD%97%2F%E6%98%AF%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E4%BA%BA%E5%A4%AA%E4%B9%85%E4%BA%86%EF%BC%8C%E6%80%BB%E8%A7%89%E5%BE%97%E6%97%B6%E9%97%B4%E5%9C%A8%E7%BF%BB%E5%80%8D%E7%9A%84%E8%BF%87%E3%80%82%E6%88%91%E4%B8%8D%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E5%9C%A8%E6%89%BE%E4%BB%80%E4%B9%88%EF%BC%8C%E5%8F%AA%E8%A7%89%E5%BE%97%E4%B8%A2%E4%BA%86%E5%BE%88%E5%A4%9A%E2%80%A6%E2%80%A6%E2%80%A6%E2%80%A6%2F</url>
-    <content type="text"><![CDATA[是不是一个人太久了，总觉得时间在翻倍的过。我不知道自己在找什么，只觉得丢了很多…………]]></content>
-      <categories>
-        <category>有毒的文字</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[Ditto，免费Windows剪贴板增强小工具，方便地复制粘贴多条记录]]></title>
     <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2FDitto%EF%BC%8C%E5%85%8D%E8%B4%B9Windows%E5%89%AA%E8%B4%B4%E6%9D%BF%E5%A2%9E%E5%BC%BA%E5%B0%8F%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%96%B9%E4%BE%BF%E5%9C%B0%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4%E5%A4%9A%E6%9D%A1%E8%AE%B0%E5%BD%95%2F</url>
     <content type="text"><![CDATA[Ditto 是 Windows 下一款免费开源的剪贴板增强软件，支持64位操作系统，支持中文，并且提供免安装的便携版。使用它，你只需像往常一些复制东西，然后按下Ctrl+`（数字1前面那个按键），就可以唤出它的界面了，里面记录了所有的复制内容，你可以选择性进行粘贴，非常的方便……Ditto 可以帮助你复制、粘贴多条记录，非常方便！ [图片上传中。。。（1）]既然很多人说它功能强大，那我们就来看看它的强大之处吧。首先，Ditto 有剪贴板搜索功能，当你复制了很多很多东西之后，一条一条地找非常麻烦，而用了 Ditto，搜索一下，技能马上找到特定的记录了，非常方便。第二个亮点是“合并粘贴”。有时在收集资料的时候，可能从多个地方复制多次然后再粘贴到同一个地方去，如果用 ClipX 的话，就要粘贴很多次了。而 Ditto 则可以使用 CTRL 或 Shitft 选择多条记录，然后一次性粘贴出来。[图片上传中。。。（3）]神奇地通过网络同步剪贴板内容：另外，相信大家都听过这样一则笑话：“是这样的张总，你在家里的电脑上按了CTRL+C，然后在公司的电脑上再按CTRL+V是肯定不行的。即使同一篇文章也不行。不不不，多贵的电脑都不行。”其实这个这个笑话还有续集，张总最后说：“王秘书，你明天不用来了，我用的是Ditto……”哈，想必大家都明白了吧 Ditto 的亮点是可以实现剪贴板网络同步功能的，只要两台电脑都装了 Ditto，配置好之后就可以方便地同步剪贴板了。[图片上传中。。。（4）]Ditto 本身实现的网络剪贴板同步是基于两台计算机直连的，两台电脑需处于同一局域网内才能比较方便地使用。不过，像张总一样两台基于互联网的电脑要怎样使用呢？对于这点，有2个比较简单的解决方法：1、使用一些虚拟局域网的软件，譬如 LogMeIn Hamachi，让两台互联网电脑处于同一个虚拟的局域网里面，然后，你懂的……2、你也可以考虑将 Ditto 的数据库文件放到 DropBox、金山快盘或者其他一些同步软件的目录中，间接地实现同步剪贴板的功能。3、或者还有更好的方法，如果你想到了，欢迎分享出来！写在后面：Ditto 还有其他一些功能，包括更换皮肤、统计粘贴数目等等，可自定义的地方也非常多，快捷键、样式、字体等等都已随心改造，值得你去摸索折腾。目前，Ditto 应该是剪贴板增强工具中的佼佼者了，加上开源免费，我们有什么理由不给它上一个“精品”的称号呢！相信使用了它之后，你工作效率又会大大提高，你会爱上它的！哦不，应该说，很可能没了它，你就不再想用那台电脑工作了～]]></content>
@@ -273,25 +289,9 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[Git，GitHub，码云，Git-Tortoise，完整配置流程]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2FGit%EF%BC%8CGitHub%EF%BC%8C%E7%A0%81%E4%BA%91%EF%BC%8CGit-Tortoise%EF%BC%8C%E5%AE%8C%E6%95%B4%E9%85%8D%E7%BD%AE%E6%B5%81%E7%A8%8B%2F</url>
-    <content type="text"><![CDATA[本文适用于github，码云，git协同工具工作的小伙伴，你可以选择git自带命令行协同工作，如果你嫌命令行麻烦，可以安装一个封装了命令行的图形用户界面的软件，git-tortoise进行协同工作。 本文需要频繁使用cmd，如果使用系统的cmd会稍微有点不便所以这里先推荐一款Windows平台上面个人觉得比较好用的一款cmd工具ConEmu ConEmu下载地址：http://www.fosshub.com/ConEmu.html 1. 安装Git，TortoiseGit，准备好Android SDK本文使用版本如下，在Win10上配置，已提供文件的下载地址，如需最新版本可进入官网地址下载。具体的安装步骤本文不做介绍，按照自己的使用习惯自己配置即可。 Git: git-1.8.3-windows-1374045102000.exe 下载地址：https://pan.baidu.com/s/1miBQj8G 官网下载地址1：https://git-scm.com/downloads 官网下载地址2：https://git-for-windows.github.io/ TortoiseGit: TortoiseGit-1.8.16.0-64bit.msi 下载地址：https://pan.baidu.com/s/1kUKzzQv 官网下载地址：https://tortoisegit.org/download/ 2. 配置环境变量，方便从命名行直接访问相关命令 Git根目录 –&gt; 变量名：Git_Home 变量值： C:\Program Files (x86)\GitTortoiseGit根目录 –&gt; 变量名：TortoiseGit_Home 变量值：C:\Program Files\TortoiseGit 备注：如果之前在其他设备上配置过Git和TortoiseGit，这里可以直接拷贝之前的.ssh目录过来使用，就不用做下面的3-9步骤了。如果是第一次配置，或者想重新配置新的账号信息，那么按照下面的步骤依次进行即可。 3. 使用Git 命令行生成公钥和私钥1、进入到系统cmd（使用快捷键Win+R然后输入cmd即可进入）界面（备注：左Shift + 鼠标右键弹出菜单里面，有直接进入命令行的菜单，但是这里千万不要用这个方，因为这里进入的命令行和系统cmd进入的权限不一样，生成的秘钥是不一样的，踩过这个坑），我这里默认路径是C:\Users\Administrator，这个路径没有要求，任何目录都可以，生成钥的时候需要输入密码，这里默认写123456，后面clone代码的时候需要用到。 2、执行命令：ssh-keygen –t rsa –C xxxx@xxx.com 3、输入保存的文件名：id_rsa 4、输入密码：123456 即可成功创建公钥和私钥，这里会保存到C:\Users\Administrator 目录下123456789$ ssh-keygen -t rsa -C username@qq.comGenerating public/private rsa key pair.Enter file in which to save the key (//.ssh/id_rsa): id_rsaEnter passphrase (empty for no passphrase):Enter same passphrase again:Your identification has been saved in id_rsa.Your public key has been saved in id_rsa.pub.The key fingerprint is:08:0f:a3:dd:5f:33:7a:aa:67:ff:e2:c4:1a:5e:21:ac username@qq.com 4. 在当前用户目录创建.ssh目录，并把id_rsa文件放入其中当前用户目录一般是在C盘用户目录下面的Administrator目录或者其他的用户目录（如果为Windows系统创建过其他用户）。 这里我的是C:\Users\Administrator 目录，进入C:\Users\Administrator目录，如果没有 .ssh目录，在当前目录下进入cmd执行命令 mkdir .ssh 即可创建。备注：有些Git版本id_rsa可能不是放到用户目录的.ssh目录，而是放到Git的安装目录下的.ssh。自己在配置过程中如果发现配置不生效，尝试把.ssh目录放到另外一个目录下。 5. 把公钥上传到服务器用文本文件打开id_rsa.pub，复制里面的全部文本，登录代码仓库服务器，添加新的ssh-key，粘贴复制的内容到key里面，Title会自动生成，这里可以仿照在github上面添加ssh-key一样的步骤添加。 6. 使用命令行下拉代码 进入cmd，进入存放代码的文件夹目录执行git命令 1、执行“git init” 初始化git环境，然后调用 2、执行“git clone 服务器代码路径”，开始下拉代码 备注：如果clone代码不成功，则把id_rsa文件放到git安装目录下的.ssh目录下，默认安装的话是 C:\Program Files (x86)\Git.ssh 7. 配置用户名和邮箱 要提交代码的时候，服务器上面显示是谁提交的代码，这里需要自己配置，配置的时候有两种方式，一种是全局配置（所有地方都用同样的用户名和邮箱），一种是针对各个工作目录自己配置。 进入cmd，进入代码工作目录，进行如下配置。全局配置：双引号也是命令内容 git config –global user.name “name”git config –global user.email “email”局部配置（命令行需要进入对应的代码工作目录）：双引号也是命令内容git config user.name “name”git config user.email “email” 8. 使用TortoiseGit来下拉代码配置1—&gt;生成 .ppk文件如果按找第2步中配置了相关环境变量，那么可以直接在cmd中打开puttygen(也可以到TortoiseGit的安装路径下找到C:\Program Files\TortoiseGit\bin\puttygen.exe) 点击下图中规定load加载私钥id_rsa，然后点击Save private key生成TortoiseGit需要使用的ppk文件（id_rsa.ppk） 9. 使用TortoiseGit来下拉代码配置2—&gt;配置TortoiseGit客户端打开TortoiseGit设置页面，配置相关参数如下：配置用户名和邮箱，配置服务器代码路径和上面得到的id_rsa.ppk路径，进入TortoiseGit的Settings页面，点击左边导航栏的Git目录，设置用户名和邮箱（Name, Email）,Name会在提交代码的时候显示出来，如果之前使用git config配置过，这里也可以不用配置的。 然后点击Git下的Remote菜单，添加一个origin远程仓库分之信息：Remote是为远程分之起个名字，URL是远程仓库地址，Putty是id_rsa.ppk文件路径，**至此就可以使用TortoiseGit正常工作了，可以试试pull，commit等功能。**]]></content>
-      <categories>
-        <category>我是一枚程序员</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[Http上传原理]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2FHttp%E4%B8%8A%E4%BC%A0%E5%8E%9F%E7%90%86%2F</url>
-    <content type="text"><![CDATA[Http上传需要用到multipart/form-data请求方式，Http协议原始方法不支持multipart/form-data请求，那这个请求自然就是由原始的请求方法拼装而成，具体规则如下： 1、multipart/form-data的本质上还是Post请求2、multipart/form-data与post方法的不同之处：请求头，请求体。3、multipart/form-data的请求头必须包含一个特殊的头信息：Content-Type，且其值也必须规定为multipart/form-data，同时还需要规定一个内容分割符用于分割请求体中的多个post的内容，如文件内容和文本内容自然需要分割开来，不然接收方就无法正常解析和还原这个文件了。4、multipart/form-data的请求体也是一个字符串，不过和post的请求体不同的是它的构造方式，post是简单的name=value值连接，而multipart/form-data则是添加了分隔符等内容的构造体。抓包结果如下：Request URL:https://your_base_url/open/qiniu/imageRequest Method:POSTStatus Code:200 OK​Request HeadersAccept-Encoding:gzipConnection:Keep-AliveContent-Length:117276Content-Type:multipart/form-data; boundary=ed67c97e-2000-47de-9033-77aeb8df43d9Host:your_base_urltoken:794d5240-de2a-465b-9a5a-66f71f567acdUser-Agent:Dalvik/2.1.0 (Linux; U; Android 5.1.1; vivo X7 Build/LMY47V) app_name/1.5.0​Request Payload–ed67c97e-2000-47de-9033-77aeb8df43d9Content-Disposition: form-data; name=”file”; filename=”coin.jpg”Content-Type: image/jpgContent-Length: 117075–ed67c97e-2000-47de-9033-77aeb8df43d9– 可以看到Request Headers中包含了Accept-Encoding、Content-Length、Content-Type、Host、User-Agent等参数，OkHttp会自动生成boundary，无需手动编写规则；Request Payload中包含了具体的上传内容，Content-Disposition包含了上传文件名以及part参数key值，Content-Type指明了上传文件的后缀格式。 User-Agent一般都会重写，以其可以包含系统信息和用户自定义的信息，系统信息可以通过System.getProperty(“http.agent”)获得，然后再拼接上app独有的信息即可]]></content>
-      <categories>
-        <category>我是一枚程序员</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[Hexo+Coding-搭建静态博客]]></title>
-    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2FHexo%2BCoding-%E6%90%AD%E5%BB%BA%E9%9D%99%E6%80%81%E5%8D%9A%E5%AE%A2%2F</url>
-    <content type="text"><![CDATA[https://blog.paddings.cn/2016/04/30/blog/hexo-coding/ 早就想搭建一个自己的博客，是时候表演真正的技术了。]]></content>
+    <title><![CDATA[解决网络劫持]]></title>
+    <url>%2F2017%2F11%2F15%2F%E6%88%91%E6%98%AF%E4%B8%80%E6%9E%9A%E7%A8%8B%E5%BA%8F%E5%91%98%2F%E8%A7%A3%E5%86%B3%E7%BD%91%E7%BB%9C%E5%8A%AB%E6%8C%81%2F</url>
+    <content type="text"><![CDATA[angularjs做的网站，用户反映路由跳转时总是回到首页。尼玛这个问题真恶心啊，远程调试半天，发现是他的网络被劫持了。然后自动给我把html也没换成了如下一个页面第一行代码就是跳转首页。cnm123&lt;script language=&quot;javascript&quot;&gt;setTimeout(&quot;location.replace(location.href.split(\&quot;#\&quot;)[0])&quot;,2000);&lt;/script&gt; 网上搜索都是一句话： 翻译过来就是：angularjs升级到1.6.3，cookie也升级到1.6.3， ui-router升级到0.4.2 。网上有人说原因是这个： 问题是怎么只劫持ui-view加载的模板，ng-include进来的模板就没有劫持。【对比ng-include的请求和ui-view的请求，发现Accept是不同的】ng-include的是：Accept:application/json, text/plain, /而ui-view 的是 Accept:text/html应该是这样的，劫持，基本劫持的是html页面，如果accept 为application/json，他的理解就是json而不是html， 而 accept为text/html时，自然就被劫持了。但只是知道了这个，仍然不知道怎么去改，因为这请求时ui-view里面封装的，不大好改。 然后终极办法是升级网站为https。好吧，那我就升级吧。 升级方法如下linux tomcat配置https12345678910111213141516171819202122[root@centos apache-tomcat-6.0.37]# keytool -genkey -alias tomcat -keyalg RSA -keystore /root/tomcat/apache-tomcat-6.0.37/conf/.keystore输入keystore密码： 再次输入新密码: 您的名字与姓氏是什么？ [Unknown]： free4lab您的组织单位名称是什么？ [Unknown]： free4lab您的组织名称是什么？ [Unknown]： free4lab您所在的城市或区域名称是什么？ [Unknown]： beijing您所在的州或省份名称是什么？ [Unknown]： beijing该单位的两字母国家代码是什么 [Unknown]： CNCN=free4lab, OU=free4lab, O=free4lab, L=beijing, ST=beijing, C=CN 正确吗？ [否]： y输入&lt;tomcat&gt;的主密码 （如果和 keystore 密码相同，按回车）： [root@centos apache-tomcat-6.0.37]# cat conf/.keystore 12345然后修改tomcat配置文件server.xml&lt;Connector port=&quot;8443&quot; protocol=&quot;HTTP/1.1&quot; SSLEnabled=&quot;true&quot; maxThreads=&quot;150&quot; scheme=&quot;https&quot; secure=&quot;true&quot; clientAuth=&quot;false&quot; keystoreFile=&quot;/root/tomcat/apache-tomcat-6.0.37/conf/.keystore&quot; keystorePass=&quot;yourpassword&quot; sslProtocol=&quot;TLS&quot; /&gt; 访问效果如下：通过curl访问，就忽略验证证书这一步12[root@f0 huahui]# curl --insecure https://192.168.1.190:8443/hello huahuiyangssl https` 这样浏览器访问就相对安全了，浏览器和服务端进行了非对称加密的握手，然后协商对称加密的密钥，然后进行相对快速的对称加密传输。即时密文在网络传输中被截获，因为无法获知对称密钥，所以这个http api就是安全的！]]></content>
       <categories>
         <category>我是一枚程序员</category>
       </categories>
