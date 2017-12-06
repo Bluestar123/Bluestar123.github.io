@@ -278,7 +278,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/Hexo+Coding-搭建静态博客/">
+    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/函数式编程初探/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -297,7 +297,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/Hexo+Coding-搭建静态博客/" itemprop="url">Hexo+Coding-搭建静态博客</a></h1>
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/函数式编程初探/" itemprop="url">函数式编程初探</a></h1>
         
 
         <div class="post-meta">
@@ -371,13 +371,12 @@
       
         
           
-          https://blog.paddings.cn/2016/04/30/blog/hexo-coding/
-早就想搭建一个自己的博客，是时候表演真正的技术了。
+          http://www.ruanyifeng.com/blog/2012/04/functional_programming.html
 
           
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/Hexo+Coding-搭建静态博客/#more" rel="contents">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/函数式编程初探/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -581,7 +580,7 @@ ssh-keygen -t rsa -C “email@emai
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/解决网络劫持/">
+    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/https-页面中引入-http-资源的解决方式/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -600,7 +599,7 @@ ssh-keygen -t rsa -C “email@emai
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/解决网络劫持/" itemprop="url">解决网络劫持</a></h1>
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/https-页面中引入-http-资源的解决方式/" itemprop="url">https-页面中引入-http-资源的解决方式</a></h1>
         
 
         <div class="post-meta">
@@ -674,11 +673,13 @@ ssh-keygen -t rsa -C “email@emai
       
         
           
-          angularjs做的网站，用户反映路由跳转时总是回到首页。尼玛这个问题真恶心啊，远程调试半天，发现是他的网络被劫持了。然后自动给我把html也没换成了如下一个页面第一行代码就是跳转首页。cnm123&lt;script language=&quot;javascript&quot;&gt;setTimeout(&quot;location.replace(location.href.split(
+          https://segmentfault.com/a/1190000004200361
+而且如果在一个 https 页面里动态的引入 http 资源，比如引入一个 js 文件，会被直接 block 掉的。Chrome v21 之后，在 SSL 加密页面 embed 非 SSL 的 Flash 资源也会被默默的屏蔽掉，只留下一句 console 报告。解决方式
+相对协议如果你的网站同时准备了 htt
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/解决网络劫持/#more" rel="contents">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/https-页面中引入-http-资源的解决方式/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -729,7 +730,7 @@ ssh-keygen -t rsa -C “email@emai
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/翻墙/">
+    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/去除百度置顶的广告，优化百度搜索/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -748,7 +749,7 @@ ssh-keygen -t rsa -C “email@emai
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/翻墙/" itemprop="url">翻墙</a></h1>
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/去除百度置顶的广告，优化百度搜索/" itemprop="url">去除百度置顶的广告，优化百度搜索</a></h1>
         
 
         <div class="post-meta">
@@ -822,24 +823,165 @@ ssh-keygen -t rsa -C “email@emai
       
         
           
-          fanqiang翻过帝国防护墙
-赛风
-windows版
-Android版
-iOS版
+          人人都唾弃百度的竞价排名，搜个关键词，前两页全tm广告，每每看到这个就恶心了。解决办法：安装浏览器插件，去掉置顶的广告。优化搜索。正常来说三个插件就够了。1.去除百度搜索置顶推广2.百度搜索-优化3.网友预加载（自动加载下一页等神奇功能）然而，我一般是装这么多软件，然后系统根据当前网站自动调用可用的软件。
+我装的软件如下
 
-Firefly 萤火虫
-windows
-osx
-Ubuntu 64位-Ubuntu 32位
-Android 4.0.3 及以上-iOS 9.3 及以上
+然后访问百度时这些插件启动，13个：
 
-Tor Browser 的Meek模式https://www.torproject.org/download/download-easy.html.en
-蓝灯h
+安装过程：Tampermonkey
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2017/11/15/我是一枚程序员/翻墙/#more" rel="contents">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/去除百度置顶的广告，优化百度搜索/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/Git，GitHub，码云，Git-Tortoise，完整配置流程/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="测不准">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/touxiang.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="测不准">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/15/我是一枚程序员/Git，GitHub，码云，Git-Tortoise，完整配置流程/" itemprop="url">Git，GitHub，码云，Git-Tortoise，完整配置流程</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
+                2017-11-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/我是一枚程序员/" itemprop="url" rel="index">
+                    <span itemprop="name">我是一枚程序员</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          本文适用于github，码云，git协同工具工作的小伙伴，你可以选择git自带命令行协同工作，如果你嫌命令行麻烦，可以安装一个封装了命令行的图形用户界面的软件，git-tortoise进行协同工作。
+本文需要频繁使用cmd，如果使用系统的cmd会稍微有点不便所以这里先推荐一款Windows平台上面个人觉得比较好用的一款cmd工具ConEmu　　ConEmu下载地址：http://www.fossh
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/11/15/我是一枚程序员/Git，GitHub，码云，Git-Tortoise，完整配置流程/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -931,7 +1073,7 @@ Tor Browser 的Meek模式https://www.torproject.org/download/download-easy.html.
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">44</span>
+                  <span class="site-state-item-count">45</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
