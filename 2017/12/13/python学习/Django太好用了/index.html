@@ -81,23 +81,54 @@
 
 
 
-<meta name="description" content="参考文章http://www.cnblogs.com/popfisher/p/5466174.html安装git安装git tortoise设置用户名和密码 $ git config –global user.name “xxx”$ git config –global user.email “xxx@xx.com” ">
+<meta name="description" content="添加应用将我们新建的应用（people）添加到 settings.py 中的 INSTALLED_APPS中，也就是告诉Django有这么一个应用     我们创建爱你了一个Person类。继承自models.Model, 一个人有姓名和年龄。 这里用到了两种Field，更多Field类型可以参考教程最后的链接。 创建">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git使用笔记整理">
-<meta property="og:url" content="https://myzhiming.top/2017/11/15/我是一枚程序员/git使用笔记整理/index.html">
+<meta property="og:title" content="Django太好用了">
+<meta property="og:url" content="https://myzhiming.top/2017/12/13/python学习/Django太好用了/index.html">
 <meta property="og:site_name" content="测不准">
-<meta property="og:description" content="参考文章http://www.cnblogs.com/popfisher/p/5466174.html安装git安装git tortoise设置用户名和密码 $ git config –global user.name “xxx”$ git config –global user.email “xxx@xx.com”   生成key ssh-keygen -t rsa -C “email@emai">
+<meta property="og:description" content="添加应用将我们新建的应用（people）添加到 settings.py 中的 INSTALLED_APPS中，也就是告诉Django有这么一个应用     我们创建爱你了一个Person类。继承自models.Model, 一个人有姓名和年龄。 这里用到了两种Field，更多Field类型可以参考教程最后的链接。 创建数据表 我们来同步一下数据库（我们使用默认的数据库 SQLite3，无需">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-31ca592169fbf8ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-442eaf56c54b1149.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-4947644b94affa5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-051fe87eb1020072.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-b470e79c2238e211.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-11-18T00:04:04.972Z">
+<meta property="og:image" content="http://p9.pstatp.com/large/4e6100000139bf4f8939">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5c00030f5aa99bdd1e">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e600000069d3802ed85">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e5f000056fefe1595aa">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5b00035590f7384c54">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e6100000421f065b780">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e610000045231d0a5bb">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e6000000916d395b95e">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e5c000312aba5c06953">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5d0000687593ed8f99">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5f000059d9a2ef405a">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5c0003137e149ee8eb">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e5b0003591720bf9193">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5c000313f83d0739bd">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5f00005b0f24298a58">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e5f00005b2637f630a4">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5d00006a398aedbd68">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e61000006ab86543d4a">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e6000000b82b0f9e227">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5c000314f05cee5d52">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e61000007949eb90619">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e61000007b1c4dc9043">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e5f00005c97ec280bef">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5c0003160ea5255b08">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e61000008a3ee885032">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5b00035c07f1cc6ec8">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e6000000da54d6175a0">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e61000009128deee170">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5b00035c61a55ac486">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e5c0003172ed9e707df">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e6000000f561d9b6d46">
+<meta property="og:image" content="http://p9.pstatp.com/large/4e5e000060346abdeb14">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e6000000fdb36b49235">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5b00035e84220f6d3b">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5c0003197211ce6266">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e5d00006f37a820dff0">
+<meta property="og:updated_time" content="2017-12-13T07:32:29.252Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git使用笔记整理">
-<meta name="twitter:description" content="参考文章http://www.cnblogs.com/popfisher/p/5466174.html安装git安装git tortoise设置用户名和密码 $ git config –global user.name “xxx”$ git config –global user.email “xxx@xx.com”   生成key ssh-keygen -t rsa -C “email@emai">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2833665-31ca592169fbf8ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="Django太好用了">
+<meta name="twitter:description" content="添加应用将我们新建的应用（people）添加到 settings.py 中的 INSTALLED_APPS中，也就是告诉Django有这么一个应用     我们创建爱你了一个Person类。继承自models.Model, 一个人有姓名和年龄。 这里用到了两种Field，更多Field类型可以参考教程最后的链接。 创建数据表 我们来同步一下数据库（我们使用默认的数据库 SQLite3，无需">
+<meta name="twitter:image" content="http://p9.pstatp.com/large/4e6100000139bf4f8939">
 
 
 
@@ -127,13 +158,13 @@
 
 
 
-  <link rel="canonical" href="https://myzhiming.top/2017/11/15/我是一枚程序员/git使用笔记整理/"/>
+  <link rel="canonical" href="https://myzhiming.top/2017/12/13/python学习/Django太好用了/"/>
 
 
 
 
 
-  <title>git使用笔记整理 | 测不准</title>
+  <title>Django太好用了 | 测不准</title>
   
 
 
@@ -284,7 +315,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/git使用笔记整理/">
+    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/12/13/python学习/Django太好用了/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -301,7 +332,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">git使用笔记整理</h1>
+          <h1 class="post-title" itemprop="name headline">Django太好用了</h1>
         
 
         <div class="post-meta">
@@ -313,8 +344,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
-                2017-11-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-13T15:11:14+08:00">
+                2017-12-13
               </time>
             
 
@@ -336,8 +367,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我是一枚程序员/" itemprop="url" rel="index">
-                    <span itemprop="name">我是一枚程序员</span>
+                  <a href="/categories/python学习/" itemprop="url" rel="index">
+                    <span itemprop="name">python学习</span>
                   </a>
                 </span>
 
@@ -373,17 +404,89 @@
       
 
       
-        <h1 id="参考文章http-www-cnblogs-com-popfisher-p-5466174-html"><a href="#参考文章http-www-cnblogs-com-popfisher-p-5466174-html" class="headerlink" title="参考文章http://www.cnblogs.com/popfisher/p/5466174.html"></a>参考文章<a href="http://www.cnblogs.com/popfisher/p/5466174.html" target="_blank" rel="noopener">http://www.cnblogs.com/popfisher/p/5466174.html</a></h1><h1 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h1><h1 id="安装git-tortoise"><a href="#安装git-tortoise" class="headerlink" title="安装git tortoise"></a>安装git tortoise</h1><h1 id="设置用户名和密码"><a href="#设置用户名和密码" class="headerlink" title="设置用户名和密码"></a>设置用户名和密码</h1><blockquote>
-<p>$ git config –global user.name “xxx”<br>$ git config –global user.email “xxx@xx.com”</p>
-</blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/2833665-31ca592169fbf8ca.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<h1 id="生成key"><a href="#生成key" class="headerlink" title="生成key"></a>生成key</h1><blockquote>
-<p>ssh-keygen -t rsa -C “email@email.com”</p>
-</blockquote>
-<p><img src="http://upload-images.jianshu.io/upload_images/2833665-442eaf56c54b1149.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="生成key"></p>
-<h1 id="配置Git-Tortoise-私钥"><a href="#配置Git-Tortoise-私钥" class="headerlink" title="配置Git Tortoise 私钥"></a>配置Git Tortoise 私钥</h1><p>　如果按找第2步中配置了相关环境变量，那么可以直接在<strong>cmd</strong>中打开<strong>puttygen</strong>(也可以到TortoiseGit的安装路径下找到<strong>C:\Program Files\TortoiseGit\bin\puttygen.exe</strong>)<br>点击下图中规定<strong>load</strong>加载私钥<strong>id_rsa</strong>，然后点击<strong>Save private key</strong>生成TortoiseGit需要使用的ppk文件<strong>（id_rsa.ppk）</strong><br><img src="http://upload-images.jianshu.io/upload_images/2833665-4947644b94affa5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""></p>
-<p><strong>9. </strong>使用TortoiseGit来下拉代码配置2—&gt;<strong>**</strong>配置TortoiseGit客户端<strong><br>　　打开</strong>TortoiseGit<strong>设置页面，配置相关参数如下：配置用户名和邮箱，配置服务器代码路径和上面得到的</strong>id_rsa.ppk<strong>路径，进入TortoiseGit的</strong>Settings<strong>页面，点击左边导航栏的Git目录，</strong>设置用户名和邮箱（Name, Email）<strong>,Name会在提交代码的时候显示出来，如果之前使用</strong>git config<strong>配置过，这里也可以不用配置的。<br><img src="http://upload-images.jianshu.io/upload_images/2833665-051fe87eb1020072.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br><img src="http://upload-images.jianshu.io/upload_images/2833665-b470e79c2238e211.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt=""><br>然后点击Git下的</strong>Remote<strong>菜单，添加一个</strong>origin<strong>远程仓库分之信息：</strong>Remote是为远程分之起个名字，URL是远程仓库地址，Putty是id_rsa.ppk文件路径<strong>
-</strong>至此就可以使用TortoiseGit正常工作了，可以试试pull，commit等功能**</p>
+        <center><img src="http://p9.pstatp.com/large/4e6100000139bf4f8939" alt="0"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e5c00030f5aa99bdd1e" alt="1"></center>
+
+<p><strong>添加应用</strong><br>将我们新建的应用（people）添加到 settings.py 中的 INSTALLED_APPS中，也就是告诉Django有这么一个应用</p>
+<center><img src="http://p3.pstatp.com/large/4e600000069d3802ed85" alt="2"></center>
+
+<center><img src="http://p1.pstatp.com/large/4e5f000056fefe1595aa" alt="3"></center>
+
+<p>我们创建爱你了一个Person类。继承自models.Model, 一个人有姓名和年龄。</p>
+<p>这里用到了两种Field，更多Field类型可以参考教程最后的链接。</p>
+<p>创建数据表</p>
+<p>我们来同步一下数据库（我们使用默认的数据库 SQLite3，无需配置）</p>
+<center><img src="http://p3.pstatp.com/large/4e5b00035590f7384c54" alt="4"></center>
+
+<p>我们用了一个 .objects.get() 方法查询出来符合条件的对象，但是大家注意到了没有，查询结果中显示<person: person="" object="">，这里并没有显示出与Tom的相关信息，如果用户多了就无法知道查询出来的到底是谁，查询结果是否正确，我们重新修改一下 people/models.py</person:></p>
+<p>name 和 age 等字段中不能有（双下划线” <strong> “，因为在Django QuerySet API中有特殊含义（用于关系，包含，不区分大小写，以什么开头或结尾，日期的大于小于，正则等）也不能有Python中的关键字，name 是合法的，student_name 也合法，但是student</strong>name不合法，try, class, continue 也不合法，因为它是Python的关键字( import keyword; print(keyword.kwlist) 可以打出所有的关键字)</p>
+<center><img src="http://p1.pstatp.com/large/4e6100000421f065b780" alt="5"></center><br>这种方法是防止重复很好的方法，但是速度要相对慢些，返回一个元组，第一个为Person对象，第二个为True或False, 新建时返回的是True, 已经存在时返回False.<br><br>获取对象有以下方法：<br><center><img src="http://p3.pstatp.com/large/4e610000045231d0a5bb" alt="6"></center>
+
+<ul>
+<li>filter是找出满足条件的，当然也有排除符合某条件的</li>
+</ul>
+<center><img src="http://p1.pstatp.com/large/4e6000000916d395b95e" alt="7"></center>
+
+<center><img src="http://p1.pstatp.com/large/4e5c000312aba5c06953" alt="8"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e5d0000687593ed8f99" alt="9"></center><br>备注：前三种方法返回的都是对应的 object，最后一种方法返回的是一个元组，(object, True/False)，创建时返回 True, 已经存在时返回 False<br><br>当有一对多，多对一，或者多对多的关系的时候，先把相关的对象查询出来<br><br><center><img src="http://p3.pstatp.com/large/4e5f000059d9a2ef405a" alt="10"></center>
+
+<p>单个 object 更新，适合于 .get(), get_or_create(), update_or_create() 等得到的 obj，和新建很类似。</p>
+<center><img src="http://p3.pstatp.com/large/4e5c0003137e149ee8eb" alt="11"></center><br>QuerySet 支持链式查询<br><center><img src="http://p1.pstatp.com/large/4e5b0003591720bf9193" alt="12"></center><br>扩展：QuerySet 重复的问题，使用 .distinct() 去重复<br><br>一般的情况下，QuerySet 中不会出来重复的，重复是很罕见的，但是当跨越多张表进行检索后，结果并到一起，可以会出来重复的值<br><br><center><img src="http://p3.pstatp.com/large/4e5c000313f83d0739bd" alt="13"></center>
+
+<p></p><h2>示例代码</h2><p></p>
+<ul>
+<li>需求一：编写登录和注册<br>编写注册功能，用户名不能已经存在，如果存在需要提示重新输入<br>注册后可以登录，成功后可以跳转到成功登录界面</li>
+</ul>
+<center><img src="http://p3.pstatp.com/large/4e5f00005b0f24298a58" alt="14"></center>
+
+<center><img src="http://p1.pstatp.com/large/4e5f00005b2637f630a4" alt="15"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e5d00006a398aedbd68" alt="16"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e61000006ab86543d4a" alt="17"></center>
+
+<center><img src="http://p1.pstatp.com/large/4e6000000b82b0f9e227" alt="18"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e5c000314f05cee5d52" alt="19"></center>
+
+<center><img src="http://p1.pstatp.com/large/4e61000007949eb90619" alt="20"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e61000007b1c4dc9043" alt="21"></center>
+
+<center><img src="http://p1.pstatp.com/large/4e5f00005c97ec280bef" alt="22"></center>
+
+<ul>
+<li>效果展示<center><img src="http://p3.pstatp.com/large/4e5c0003160ea5255b08" alt="23"></center>
+
+</li>
+</ul>
+<center><img src="http://p1.pstatp.com/large/4e61000008a3ee885032" alt="24"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e5b00035c07f1cc6ec8" alt="25"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e6000000da54d6175a0" alt="26"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e61000009128deee170" alt="27"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e5b00035c61a55ac486" alt="28"></center>
+
+<center><img src="http://p1.pstatp.com/large/4e5c0003172ed9e707df" alt="29"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e6000000f561d9b6d46" alt="30"></center>
+
+<p>views.py</p>
+<center><img src="http://p9.pstatp.com/large/4e5e000060346abdeb14" alt="31"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e6000000fdb36b49235" alt="32"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e5b00035e84220f6d3b" alt="33"></center>
+
+<center><img src="http://p3.pstatp.com/large/4e5c0003197211ce6266" alt="34"></center>
+
+<p>效果展示：</p>
+<center><img src="http://p1.pstatp.com/large/4e5d00006f37a820dff0" alt="35"></center>
 
       
     </div>
@@ -437,8 +540,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/15/我是一枚程序员/BootStrap可视化布局系统，自动生成代码/" rel="next" title="BootStrap可视化布局系统，自动生成代码">
-                <i class="fa fa-chevron-left"></i> BootStrap可视化布局系统，自动生成代码
+              <a href="/2017/12/13/python学习/好玩的库/" rel="next" title="python好玩的库">
+                <i class="fa fa-chevron-left"></i> python好玩的库
               </a>
             
           </div>
@@ -446,10 +549,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/11/15/我是一枚程序员/Git，GitHub，码云，Git-Tortoise，完整配置流程/" rel="prev" title="Git，GitHub，码云，Git-Tortoise，完整配置流程">
-                Git，GitHub，码云，Git-Tortoise，完整配置流程 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -604,7 +703,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章http-www-cnblogs-com-popfisher-p-5466174-html"><span class="nav-number">1.</span> <span class="nav-text">参考文章http://www.cnblogs.com/popfisher/p/5466174.html</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装git"><span class="nav-number">2.</span> <span class="nav-text">安装git</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#安装git-tortoise"><span class="nav-number">3.</span> <span class="nav-text">安装git tortoise</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置用户名和密码"><span class="nav-number">4.</span> <span class="nav-text">设置用户名和密码</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#生成key"><span class="nav-number">5.</span> <span class="nav-text">生成key</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#配置Git-Tortoise-私钥"><span class="nav-number">6.</span> <span class="nav-text">配置Git Tortoise 私钥</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">示例代码</span></a></li></ol></div>
             
 
           </div>
