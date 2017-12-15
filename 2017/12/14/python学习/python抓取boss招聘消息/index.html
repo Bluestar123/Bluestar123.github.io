@@ -81,26 +81,29 @@
 
 
 
-<meta name="description" content="人人都唾弃百度的竞价排名，搜个关键词，前两页全tm广告，每每看到这个就恶心了。解决办法：安装浏览器插件，去掉置顶的广告。优化搜索。正常来说三个插件就够了。1.去除百度搜索置顶推广2.百度搜索-优化3.网友预加载（自动加载下一页等神奇功能）然而，我一般是装这么多软件，然后系统根据当前网站自动调用可用的软件。 我装的软件如">
+<meta name="description" content="开发环境   一、准备工作 安装 Scrapy pip3 install scrapy如果顺利的话,会像本人这样,装了一大堆软件包   二、新建项目scrapy startproject www_zhipin_com如果顺利的话,会像本人这样   三、定义要抓取的Item在items.py 文件中定义一个类   四、分">
 <meta property="og:type" content="article">
-<meta property="og:title" content="去除百度置顶的广告，优化百度搜索">
-<meta property="og:url" content="https://myzhiming.top/2017/11/15/我是一枚程序员/去除百度置顶的广告，优化百度搜索/index.html">
+<meta property="og:title" content="python抓取boss招聘消息">
+<meta property="og:url" content="https://myzhiming.top/2017/12/14/python学习/python抓取boss招聘消息/index.html">
 <meta property="og:site_name" content="测不准">
-<meta property="og:description" content="人人都唾弃百度的竞价排名，搜个关键词，前两页全tm广告，每每看到这个就恶心了。解决办法：安装浏览器插件，去掉置顶的广告。优化搜索。正常来说三个插件就够了。1.去除百度搜索置顶推广2.百度搜索-优化3.网友预加载（自动加载下一页等神奇功能）然而，我一般是装这么多软件，然后系统根据当前网站自动调用可用的软件。 我装的软件如下  然后访问百度时这些插件启动，13个：  安装过程：Tampermonkey">
+<meta property="og:description" content="开发环境   一、准备工作 安装 Scrapy pip3 install scrapy如果顺利的话,会像本人这样,装了一大堆软件包   二、新建项目scrapy startproject www_zhipin_com如果顺利的话,会像本人这样   三、定义要抓取的Item在items.py 文件中定义一个类   四、分析页面一般一条招聘像下面这样   五、爬虫代码在 spiders 目录下新建">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-9446691a7ae10604.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-1a3e8abbc65a417e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-45eaeb67bfa17693.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-356ab67aa3e3bf2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-93d02cb915f52441.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-3d74a15aaf571558.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-7da48ebab4df0db5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:image" content="http://upload-images.jianshu.io/upload_images/2833665-8701dac69657e9f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
-<meta property="og:updated_time" content="2017-11-18T00:04:04.982Z">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e59000374a6b1be8247">
+<meta property="og:image" content="http://p3.pstatp.com/large/4b040003bd6917ca666a">
+<meta property="og:image" content="http://p3.pstatp.com/large/4e5b000215f899432f3b">
+<meta property="og:image" content="http://p9.pstatp.com/large/4b050003b4a975197f33">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e5a00035d309e460f23">
+<meta property="og:image" content="http://p3.pstatp.com/large/4b060003b61fcb521afb">
+<meta property="og:image" content="http://p3.pstatp.com/large/4b060003b8eb131a459a">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e5900036b71b2378bda">
+<meta property="og:image" content="http://p3.pstatp.com/large/4b040003c978f23caf9a">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e5900036c5d5bd36a32">
+<meta property="og:image" content="http://p1.pstatp.com/large/4e5c0001dbf634c08d74">
+<meta property="og:updated_time" content="2017-12-14T01:55:13.266Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="去除百度置顶的广告，优化百度搜索">
-<meta name="twitter:description" content="人人都唾弃百度的竞价排名，搜个关键词，前两页全tm广告，每每看到这个就恶心了。解决办法：安装浏览器插件，去掉置顶的广告。优化搜索。正常来说三个插件就够了。1.去除百度搜索置顶推广2.百度搜索-优化3.网友预加载（自动加载下一页等神奇功能）然而，我一般是装这么多软件，然后系统根据当前网站自动调用可用的软件。 我装的软件如下  然后访问百度时这些插件启动，13个：  安装过程：Tampermonkey">
-<meta name="twitter:image" content="http://upload-images.jianshu.io/upload_images/2833665-9446691a7ae10604.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta name="twitter:title" content="python抓取boss招聘消息">
+<meta name="twitter:description" content="开发环境   一、准备工作 安装 Scrapy pip3 install scrapy如果顺利的话,会像本人这样,装了一大堆软件包   二、新建项目scrapy startproject www_zhipin_com如果顺利的话,会像本人这样   三、定义要抓取的Item在items.py 文件中定义一个类   四、分析页面一般一条招聘像下面这样   五、爬虫代码在 spiders 目录下新建">
+<meta name="twitter:image" content="http://p3.pstatp.com/large/4e59000374a6b1be8247">
 
 
 
@@ -130,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="https://myzhiming.top/2017/11/15/我是一枚程序员/去除百度置顶的广告，优化百度搜索/"/>
+  <link rel="canonical" href="https://myzhiming.top/2017/12/14/python学习/python抓取boss招聘消息/"/>
 
 
 
 
 
-  <title>去除百度置顶的广告，优化百度搜索 | 测不准</title>
+  <title>python抓取boss招聘消息 | 测不准</title>
   
 
 
@@ -287,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/11/15/我是一枚程序员/去除百度置顶的广告，优化百度搜索/">
+    <link itemprop="mainEntityOfPage" href="https://myzhiming.top/2017/12/14/python学习/python抓取boss招聘消息/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="测不准">
@@ -304,7 +307,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">去除百度置顶的广告，优化百度搜索</h1>
+          <h1 class="post-title" itemprop="name headline">python抓取boss招聘消息</h1>
         
 
         <div class="post-meta">
@@ -316,8 +319,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-15T15:32:50+08:00">
-                2017-11-15
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-14T09:40:14+08:00">
+                2017-12-14
               </time>
             
 
@@ -339,8 +342,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/我是一枚程序员/" itemprop="url" rel="index">
-                    <span itemprop="name">我是一枚程序员</span>
+                  <a href="/categories/python学习/" itemprop="url" rel="index">
+                    <span itemprop="name">python学习</span>
                   </a>
                 </span>
 
@@ -376,21 +379,50 @@
       
 
       
-        <p>人人都唾弃百度的竞价排名，搜个关键词，前两页全tm广告，每每看到这个就恶心了。<br>解决办法：<br>安装浏览器插件，去掉置顶的广告。优化搜索。<br>正常来说三个插件就够了。<br>1.去除百度搜索置顶推广<br>2.百度搜索-优化<br>3.网友预加载（自动加载下一页等神奇功能）<br>然而，我一般是装这么多软件，然后系统根据当前网站自动调用可用的软件。</p>
-<h1 id="我装的软件如下"><a href="#我装的软件如下" class="headerlink" title="我装的软件如下"></a>我装的软件如下</h1><p><img src="http://upload-images.jianshu.io/upload_images/2833665-9446691a7ae10604.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"><br><img src="http://upload-images.jianshu.io/upload_images/2833665-1a3e8abbc65a417e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2833665-45eaeb67bfa17693.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<h2 id="然后访问百度时这些插件启动，13个："><a href="#然后访问百度时这些插件启动，13个：" class="headerlink" title="然后访问百度时这些插件启动，13个："></a>然后访问百度时这些插件启动，13个：</h2><p><img src="http://upload-images.jianshu.io/upload_images/2833665-356ab67aa3e3bf2c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2833665-93d02cb915f52441.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="浏览器插件"></p>
-<p>安装过程：<br><strong>Tampermonkey</strong> 是一款免费的浏览器扩展和最为流行的用户脚本管理器，它适用于 <a href="http://tampermonkey.net/#" target="_blank" rel="noopener"><strong>Chrome</strong></a>, <a href="http://tampermonkey.net/#" target="_blank" rel="noopener"><strong>Microsoft Edge</strong></a>, <a href="http://tampermonkey.net/#" target="_blank" rel="noopener"><strong>Safari</strong></a>, <a href="http://tampermonkey.net/#" target="_blank" rel="noopener"><strong>Opera Next</strong></a>, 和 <a href="http://tampermonkey.net/#" target="_blank" rel="noopener"><strong>Firefox</strong></a>。 虽然有些受支持的浏览器拥有原生的用户脚本支持，但 Tampermonkey 将在您的用户脚本管理方面提供更多的便利。 它提供了诸如便捷脚本安装、自动更新检查、标签中的脚本运行状况速览、内置的编辑器等众多功能， 同时Tampermonkey还有可能正常运行原本并不兼容的脚本。 </p>
-<p><img src="http://upload-images.jianshu.io/upload_images/2833665-3d74a15aaf571558.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>应用市场，搜索Tampermonkey，安装即可。中文叫油猴子。<br>安装完后，获取脚本的网站：<a href="https://greasyfork.org/zh-CN" target="_blank" rel="noopener">https://greasyfork.org/zh-CN</a><br><img src="http://upload-images.jianshu.io/upload_images/2833665-7da48ebab4df0db5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="image.png"></p>
-<p>步骤如下：<br>第一步：安装一个用户脚本管理器</p>
-<p>Chrome 上的 Tampermonkey</p>
-<p>要使用用户脚本，您首先需要安装一个用户脚本管理器。根据您使用的浏览器不同，可用的用户脚本管理器也有所不同。<br>Chrome：<a href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo" target="_blank" rel="noopener">Tampermonkey</a> 或 <a href="https://chrome.google.com/webstore/detail/violent-monkey/jinjaccalgkegednnccohejagnlnfdag" target="_blank" rel="noopener">Violent monkey</a><br>Firefox：<a href="https://addons.mozilla.org/firefox/addon/greasemonkey/" target="_blank" rel="noopener">Greasemonkey</a>、<a href="https://addons.mozilla.org/firefox/addon/tampermonkey/" target="_blank" rel="noopener">Tampermonkey</a><br>或 <a href="https://addons.mozilla.org/firefox/addon/violentmonkey/" target="_blank" rel="noopener">Violentmonkey</a>Safari：<a href="http://tampermonkey.net/?browser=safari" target="_blank" rel="noopener">Tampermonkey</a><br>Microsoft Edge：<a href="https://www.microsoft.com/store/p/tampermonkey/9nblggh5162s" target="_blank" rel="noopener">Tampermonkey</a><br>Opera：<a href="https://addons.opera.com/extensions/details/tampermonkey-beta/" target="_blank" rel="noopener">Tampermonkey</a><br>或 <a href="https://addons.opera.com/extensions/details/violent-monkey/" target="_blank" rel="noopener">Violentmonkey</a>Maxthon：<a href="http://extension.maxthon.com/detail/index.php?view_id=1680" target="_blank" rel="noopener">Violentmonkey</a><br>Dolphin：<a href="https://play.google.com/store/apps/details?id=net.tampermonkey.dolphin" target="_blank" rel="noopener">Tampermonkey</a><br>UC：<a href="https://play.google.com/store/apps/details?id=net.tampermonkey.uc" target="_blank" rel="noopener">Tampermonkey</a><br>Qupzilla：（不需要额外软件）</p>
-<p>第二步：安装一个用户脚本<br><img src="http://upload-images.jianshu.io/upload_images/2833665-8701dac69657e9f7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Install button example">用户脚本的安装按钮</p>
-<p><a href="https://greasyfork.org/zh-CN/scripts" target="_blank" rel="noopener">浏览此网站</a> 查找您想尝试的用户脚本。最流行的用户脚本有：<br><a href="https://greasyfork.org/zh-CN/scripts/24192-kill-baidu-ad" target="_blank" rel="noopener">百度广告(首尾推广及右侧广告)清理</a> - 彻底清理百度搜索(www.baidu.com)结果首尾的推广广告、二次顽固广告与右侧广告，并防止反复<br><a href="https://greasyfork.org/zh-CN/scripts/2600-%E8%B7%B3%E8%BF%87%E7%BD%91%E7%AB%99%E7%AD%89%E5%BE%85-%E9%AA%8C%E8%AF%81%E7%A0%81%E5%8F%8A%E7%99%BB%E5%BD%95" target="_blank" rel="noopener">跳过网站等待、验证码及登录</a> - 移除各类网站验证码、登录、倒计时及更多!<br><a href="https://greasyfork.org/zh-CN/scripts/13463-%E7%BD%91%E7%9B%98%E8%87%AA%E5%8A%A8%E5%A1%AB%E5%86%99%E5%AF%86%E7%A0%81-%E5%A2%9E%E5%BC%BA%E7%89%88" target="_blank" rel="noopener">网盘自动填写密码【增强版】</a> - 网盘自动填写提取密码【增强版】+网盘超链接与提取码融合。<br><a href="https://greasyfork.org/zh-CN/scripts/496-%E7%99%BE%E5%BA%A6%E4%BA%91%E6%8F%92%E4%BB%B6-apikey" target="_blank" rel="noopener">百度云插件+APIKey</a> - 在百度云网盘的页面添加一个搜索框，调用搜索API搜索所有公开分享文件// To add a search frame that calls some api for searching some public shared files in BaiduYun cloud netdisk.<br><a href="https://greasyfork.org/zh-CN/scripts/14146-%E7%BD%91%E9%A1%B5%E9%99%90%E5%88%B6%E8%A7%A3%E9%99%A4" target="_blank" rel="noopener">网页限制解除</a> - 通杀大部分网站，可以解除禁止复制、剪切、选择文本、右键菜单的限制。</p>
-<p>在您找到想要的用户脚本后，点击用户脚本页面上绿色的安装按钮，您的用户脚本管理器将询问您是否安装。</p>
-<p>第三步：使用用户脚本<br>转至用户脚本适用的网站。它应该已自动启动和生效。在试用用户脚本后，您可以返回用户脚本页面，给用户脚本的作者留下反馈。</p>
+        <center><img src="http://p3.pstatp.com/large/4e59000374a6b1be8247" alt="0"></center>
+
+<p></p><h2>开发环境</h2><p></p>
+<center><img src="http://p3.pstatp.com/large/4b040003bd6917ca666a" alt="1"></center>
+
+<p>一、准备工作</p>
+<p>安装 Scrapy</p>
+<p>pip3 install scrapy<br>如果顺利的话,会像本人这样,装了一大堆软件包</p>
+<center><img src="http://p3.pstatp.com/large/4e5b000215f899432f3b" alt="2"></center><br><center><img src="http://p9.pstatp.com/large/4b050003b4a975197f33" alt="3"></center>
+
+<p></p><h2>二、新建项目</h2><br>scrapy startproject www_zhipin_com<br>如果顺利的话,会像本人这样<p></p>
+<center><img src="http://p1.pstatp.com/large/4e5a00035d309e460f23" alt="4"></center>
+
+<p></p><h2>三、定义要抓取的Item</h2><br>在items.py 文件中定义一个类<p></p>
+<center><img src="http://p3.pstatp.com/large/4b060003b61fcb521afb" alt="5"></center>
+
+<p></p><h2>四、分析页面</h2><br>一般一条招聘像下面这样<p></p>
+<center><img src="http://p3.pstatp.com/large/4b060003b8eb131a459a" alt="6"></center>
+
+<p></p><h2>五、爬虫代码</h2><br>在 spiders 目录下新建 zhipin_spider.py<p></p>
+<center><img src="http://p1.pstatp.com/large/4e5900036b71b2378bda" alt="7"></center>
+
+<p>运行脚本</p>
+<p>scrapy crawl zhipin -o item.json<br>这里会在项目目录下生成 item.json 的一个 json 文件</p>
+<p>Point 1 设置 UTF-8 编码</p>
+<p>但是不巧，往往这是一个 Unicode 编码的文件，所以需要加个设置</p>
+<p>在 settings.py中添加(PS:也可以在运行的时候带上这个参数)</p>
+<p>FEED_EXPORT_ENCODING = ‘utf-8’<br>亲测以下方法是不能解决问题的</p>
+<center><img src="http://p3.pstatp.com/large/4b040003c978f23caf9a" alt="8"></center>
+
+<p>Point 2 慢一点</p>
+<p>注意不要爬的太快，因为 BOSS 直聘只会显示20页的招聘信息，所以理论上这个脚本只要执行20次即可，那么间隔时间尽量设置长一点，本人爬的时候设置的是5秒，但是后面稍微快了一点就六字真言<br>了，还好我已经把数据爬到了</p>
+<p>慢一点，才能快一点！</p>
+<p><center><img src="http://p1.pstatp.com/large/4e5900036c5d5bd36a32" alt="9"></center><br>Point 3 修改为自定义的条件</p>
+<p>可以修改 zhipin_spider.py 第18行 positionUrl 的链接，把 PHP 修改为 Java 或 Python，把城市编码（’c101020100’ == 上海）换成你需要查询的城市，即可爬取自定的岗位，这就很灵性了！</p>
+<p></p><h2>六、保存到数据库</h2><br>一条json数据如下<p></p>
+<p><center><img src="http://p1.pstatp.com/large/4e5c0001dbf634c08d74" alt="10"></center><br>使用软件将json文件导入到 MongoDB 中,以备后面的使用</p>
+<p></p><h2>不足</h2><p></p>
+<ul>
+<li>这里招聘的详细要求还没有爬取</li>
+<li>刚抓到的数据还没初步处理</li>
+</ul>
+<p></p><h2>后记</h2><br>有人可能会问，爬这些数据有什么用呢，现在又不跳槽。<p></p>
+<p>本人的回答是，那当然肯定必须有用啊，所谓防患于未然、知己知彼，百战不殆，只有及时了解市面上的需求，才能有针对性的提升自己、学习技术，从另一方面来看，那有关钱途的事都是大事啊。</p>
 
       
     </div>
@@ -444,8 +476,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/11/15/我是一枚程序员/Git，GitHub，码云，Git-Tortoise，完整配置流程/" rel="next" title="Git，GitHub，码云，Git-Tortoise，完整配置流程">
-                <i class="fa fa-chevron-left"></i> Git，GitHub，码云，Git-Tortoise，完整配置流程
+              <a href="/2017/12/13/python学习/Django太好用了/" rel="next" title="Django太好用了">
+                <i class="fa fa-chevron-left"></i> Django太好用了
               </a>
             
           </div>
@@ -454,8 +486,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/11/15/我是一枚程序员/在windows中安装ubuntu/" rel="prev" title="在windows中安装ubuntu">
-                在windows中安装ubuntu <i class="fa fa-chevron-right"></i>
+              <a href="/2017/12/15/python学习/python调用百度AI实现语音识别/" rel="prev" title="python调用百度AI实现语音识别">
+                python调用百度AI实现语音识别 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -611,7 +643,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#我装的软件如下"><span class="nav-number">1.</span> <span class="nav-text">我装的软件如下</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#然后访问百度时这些插件启动，13个："><span class="nav-number">1.1.</span> <span class="nav-text">然后访问百度时这些插件启动，13个：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">开发环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">2.</span> <span class="nav-text">二、新建项目</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">3.</span> <span class="nav-text">三、定义要抓取的Item</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">4.</span> <span class="nav-text">四、分析页面</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">5.</span> <span class="nav-text">五、爬虫代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">6.</span> <span class="nav-text">六、保存到数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">7.</span> <span class="nav-text">不足</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#undefined"><span class="nav-number">8.</span> <span class="nav-text">后记</span></a></li></ol></div>
             
 
           </div>
